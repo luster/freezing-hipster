@@ -8,5 +8,5 @@ REMOVE THIS LINE AND RENAME TO apis.json
         "prod_website_url": "http://yourwebsite.com",
         "prod_redirect_uri": "http://yourwebsite.com/callback?code=%s",
         "auth_url": "https://api.instagram.com/oauth/authorize/?client_id=%s&redirect_uri=%s&response_type=code"
-                                                                            }
+    }
 }
