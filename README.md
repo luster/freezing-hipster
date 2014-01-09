@@ -1,4 +1,4 @@
 freezing-hipster
 ================
 
-My website to showcase my music and engineering backgrounds.
+Time King website. Aggregates and displays data from all of their social networks.
