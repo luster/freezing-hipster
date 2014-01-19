@@ -1,36 +1,35 @@
-class Social:
+class Social(object):
 
-    """Class for social auth and content fetch."""
+    """Base class for social auth and content fetch and store."""
 
     def __init__(self, api):
-        self.sn = api['name']
         self.api = api
 
     def authenticate(self):
-        pass
+        # try to get access token, store and return
+        # if access token not in datastore
+            # redirect and authenticate user
+            # get access token
+            # store token in data store w/ user info
 
-    def get_content(self, tag=''):
-        if self.sn == 'Instagram':
-            return 
+        raise NotImplementedError
 
+    def fetch(self, timestamp=False, tag=''):
+        # if timestamp flag is true
+            # grab most recent post timestamp
+            # query post range from after timestamp
+        # else
+            # grab all posts
 
-class FetchInstagram:
+        # store new posts in datastore
 
-    # initialize with a particular user -> get their access token from datastore
-    def __init__(self, social_user, config):
-        pass
+        raise NotImplementedError
 
-    def fetch_data(self, response):
-        pass
+    def store(self, data):
+        # get datastore key for right datatype (socialuser or post)
 
-        # get first API response w/ 1 post - first post is most recent
+        # store post
+        raise NotImplementedError
 
-        # if response['data']['created_time'] not equal to most recent post in datastore
-            # get posts in between these two times
-            # min_timestamp is timestamp from most recent post
-            # while response['pagination']['next_url']
-                # go to next url and save data
-                # image model
-                # check for video
 
 

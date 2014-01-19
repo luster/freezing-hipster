@@ -19,3 +19,4 @@ conf = confs['Development']
 for sn in apis:
     apis[sn]['auth_url'] = apis[sn]['auth_url'].replace('%%REDIRECT_URI%%',conf['redirect'])
     apis[sn]['token_url'] = apis[sn]['token_url'].replace('%%REDIRECT_URI%%',conf['redirect'])
+    apis[sn]['redirect_uri'] = conf['redirect']
