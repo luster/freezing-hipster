@@ -1,4 +1,6 @@
 *.py[cod]
 .DS_Store
 *.*.swp
-
+conf/apis.json
+conf/site-conf.json
+notes

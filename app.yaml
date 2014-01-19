@@ -5,5 +5,21 @@ api_version: 1
 threadsafe: true
 
 handlers:
+- url: /static/css
+  static_dir: static/css
+
 - url: /.*
   script: app.application
+
+- url: /admin/.*
+  script: admin.application
+  login: admin
+
+- url: /callback/.*
+  script: callback.application
+
+libraries:
+- name: webapp2
+  version: latest
+- name: jinja2
+  version: latest

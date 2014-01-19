@@ -1,30 +1,15 @@
 import webapp2
 import json
+from lib.Social import Social
+from google.appengine.api import users
+from google.appengine.ext import ndb
+from admin import Admin
+from callback import Callback
 
 class MainPage(webapp2.RequestHandler):
 
     def get(self):
-        self.response.write('Hello, World! Fuck you')
-
-class Callback(webapp2.RequestHandler):
-
-    def load_conf(self):
-        apis_file = open('./conf/apis.json','r')
-        self.apis = json.loads(apis_file.read())
-
-    def get(self):
-        self.load_conf()
-
-        self.response.write('CALLBACK!<br><br>')
-        code = self.request.get('code')
-        self.response.write('Code: '+code+'<br><br>')
-        self.response.write(self.apis)
-
-class Admin(webapp2.RequestHandler):
-
-    def get(self):
-        self.response.write('ADMIN COMING SOON!')
-
+        self.response.write('HOMEPAGE')
 
 application = webapp2.WSGIApplication([
     ('/', MainPage),
