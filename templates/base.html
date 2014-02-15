@@ -1,1 +1,324 @@
 <!-- Base template -->
+{% autoescape true %}
+
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="">
+    <meta name="author" content="">
+
+    <title>Time King</title>
+
+
+    <link rel="stylesheet" href="http://netdna.bootstrapcdn.com/bootstrap/3.0.0/css/bootstrap.min.css">
+    <!-- Bootstrap core CSS -->
+    <link href="./static/css/bootstrap.css" rel="stylesheet">
+    <link rel="stylesheet" href="http://blueimp.github.io/Gallery/css/blueimp-gallery.min.css">
+    <link rel="stylesheet" href="./modules/Gallery/css/bootstrap-image-gallery.min.css">
+
+    <!-- Custom styles for this template -->
+    <link href="./static/css/override.css" rel="stylesheet">
+
+
+    <!-- HTML5 shim and Respond.js IE8 support of HTML5 elements and media queries -->
+    <!--[if lt IE 9]>
+      <script src="https://oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script>
+      <script src="https://oss.maxcdn.com/libs/respond.js/1.3.0/respond.min.js"></script>
+    <![endif]-->
+  </head>
+
+  <body>
+
+    <!-- Fixed navbar -->
+    <div id="tk-nav" class="navbar navbar-default navbar-fixed-top" role="navigation">
+      <div class="container">
+        <div class="navbar-header">
+          <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse">
+            <span class="sr-only">Toggle navigation</span>
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+          </button>
+          <!--
+          <a class="navbar-brand" href="#">Project name</a>
+          -->
+        </div>
+        <div class="navbar-collapse collapse">
+          <ul class="nav navbar-nav">
+              <!--<li><a href="#landing"><img src="./static/img/Assets/logo.png" class="logo"></a></li>-->
+              <li><a href="#landing"><div class="logo"></div></a></li>
+            </ul>
+        <ul class="nav navbar-nav navbar-right">
+            {% for item in top_nav %}
+            <li><a href="{{item.url}}" style="text-transform: uppercase;">{{item.text}}</a></li>
+            {% endfor %}
+          </ul>
+        </div><!--/.nav-collapse -->
+      </div>
+    </div>
+
+    <!-- Video container -->
+        <div id="landing" class="container">
+            <video autoplay loop><!--loop>-->
+                <source src="./static/img/Assets/landing.mp4" type="video/mp4">
+                <object data="./static/img/Assets/landing.mp4">
+                <embed src="./static/img/Assets/landing.mp4"></object> 
+            </video>
+        </div>
+
+    <!-- Bandcamp container -->
+        <div id="music" class="container">
+            <div class="row span12 center">
+                <!--<h1 style="font-family: tk-logo">MUSIC</h1>-->
+
+                <div class="bandcamp">
+                    <iframe class="bc-iframe" style="border: 0; width: 459px; height: 350px;" src="http://bandcamp.com/EmbeddedPlayer/album=3622701213/size=large/bgcol=ffffff/linkcol=0687f5/artwork=none/transparent=true/" seamless><a href="http://timekingofficial.bandcamp.com/album/watson">Watson by Time King</a></iframe>
+                </div>
+
+                <div class="promo">
+                    <img src="./static/img/Assets/Music_Watson_02_01.png" alt="Time King LP Coming Soon!">
+                </div>
+            </div>
+        </div>
+
+
+
+    <!-- Tour container -->
+        <div id="tour" class="container">
+            <div class="row span12 center">
+                <h1 style="font-family: tk-logo;margin-top:40px;margin-bottom:40px">SHOW DATES</h1>
+                {% for show in show_dates %}
+                <h2 style="font-family: tk-def;margin-bottom:5px;">{{show.date}}</h2>
+                <h3 style="font-family: tk-def;margin-top:0;margin-bottom:5px;">{{show.city}}<br>{{show.venue}}<br>{{show.time}}</h3>
+                {% endfor %}
+            </div>
+        </div>
+
+
+    <!-- Shop container -->
+        <div id="shop" class="container">
+            <div class="row span12 center">
+                <h1 style="font-family: tk-logo;color:black;margin-top:40px;margin-bottom:40px;">ONLINE STORE COMING SOON!</h1>
+
+                <!-- The Bootstrap Image Gallery lightbox, should be a child element of the document body -->
+                <div id="blueimp-gallery" class="blueimp-gallery">
+                    <!-- The container for the modal slides -->
+                    <div class="slides"></div>
+                    <!-- Controls for the borderless lightbox -->
+                    <h3 class="title"></h3>
+                    <a class="prev">‹</a>
+                    <a class="next">›</a>
+                    <a class="close">×</a>
+                    <a class="play-pause"></a>
+                    <ol class="indicator"></ol>
+                    <!-- The modal dialog, which will be used to wrap the lightbox content -->
+                    <div class="modal fade">
+                        <div class="modal-dialog">
+                            <div class="modal-content">
+                                <div class="modal-header">
+                                    <button type="button" class="close" aria-hidden="true">&times;</button>
+                                    <h4 class="modal-title"></h4>
+                                </div>
+                                <div class="modal-body next"></div>
+                                <div class="modal-footer">
+                                    <button type="button" class="btn btn-default pull-left prev">
+                                        <i class="glyphicon glyphicon-chevron-left"></i>
+                                        Previous
+                                    </button>
+                                    <button type="button" class="btn btn-primary next">
+                                        Next
+                                        <i class="glyphicon glyphicon-chevron-right"></i>
+                                    </button>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div id="links">
+                    {% for item in merch %}
+                    <a href="{{item.href}}" title="{{item.alt}}" data-gallery>
+                        <img src="{{item.href}}" alt="{{item.alt}}" style="width:300px;height:auto;">
+                    </a>
+                    {% endfor %}
+                </div>
+
+                <br><br>
+
+
+            </div>
+        </div>
+
+    <!-- Contact container -->
+        <div id="contact" class="container">
+            <div class="row span12 center">
+                <div class="social-sprites">
+                    <ul class="sprite-table">
+                        <li><a href="http://youtube.com/timekingofficial"><img class="lou-button" src="./static/img/Assets/social/youtube.png" alt="youtube"></a></li>
+                        <li><a href="http://instagram.com/timekingofficial"><img class="lou-button" src="./static/img/Assets/social/instagram.png" alt="instagram"></a></li>
+                        <li><a href="http://twitter.com/timekingband"><img class="lou-button" src="./static/img/Assets/social/twitter.png" alt="twitter"></a></li>
+                        <li><a href="http://facebook.com/timekingofficial"><img class="lou-button" src="./static/img/Assets/social/facebook.png" alt="facebook"></a></li>
+                        <li><a href="http://timekingofficial.bandcamp.com"><img class="lou-button" src="./static/img/Assets/social/bandcamp.png" alt="bandcamp"></a></li> 
+                        <!-- TODO: add vine <li class="sprite pos-6"><a href="http://vine.co/timekingofficial"><<div class="clip pos-6"></div>/a></li> -->
+                    </ul>
+
+                </div>
+
+                <form class="form-horizontal" action="/submit">
+                <fieldset>
+
+
+                <!-- Text input-->
+                <div class="form-group">
+                  <label class="col-md-4 control-label" for="firstName">First Name</label>  
+                  <div class="col-md-4">
+                  <input id="firstName" name="firstName" type="text" placeholder="First Name" class="form-control input-md" required="">
+                    
+                  </div>
+                </div>
+
+                <!-- Text input-->
+                <div class="form-group">
+                  <label class="col-md-4 control-label" for="lastName">Last Name</label>  
+                  <div class="col-md-4">
+                  <input id="lastName" name="lastName" type="text" placeholder="Last Name" class="form-control input-md" required="">
+                    
+                  </div>
+                </div>
+
+                <!-- Text input-->
+                <div class="form-group">
+                  <label class="col-md-4 control-label" for="email">Email</label>  
+                  <div class="col-md-4">
+                  <input id="email" name="email" type="text" placeholder="email@example.com" class="form-control input-md" required="">
+                    
+                  </div>
+                </div>
+
+                <!-- Text input-->
+                <div class="form-group">
+                  <label class="col-md-4 control-label" for="phone">Phone Number</label>  
+                  <div class="col-md-4">
+                  <input id="phone" name="phone" type="text" placeholder="(212) 555-5555 (optional)" class="form-control input-md">
+                    
+                  </div>
+                </div>
+
+                <!-- Textarea -->
+                <div class="form-group">
+                  <label class="col-md-4 control-label" for="comments">Comments</label>
+                  <div class="col-md-4">                     
+                    <textarea rows="6" class="form-control" id="comments" name="comments"></textarea>
+                  </div>
+                </div>
+
+                <!-- Button -->
+                <div class="form-group">
+                  <label class="col-md-4 control-label" for="submit"></label>
+                  <div class="col-md-4">
+                    <button id="submit" name="submit" class="tk-button"></button>
+                  </div>
+                </div>
+
+                </fieldset>
+                </form>
+
+            </div>
+        </div>
+
+
+
+
+    <!-- Bootstrap core JavaScript
+    ================================================== -->
+    <!-- Placed at the end of the document so the pages load faster -->
+    <script src="https://code.jquery.com/jquery-1.10.2.min.js"></script>
+    <script src="./static/js/bootstrap.min.js"></script>
+
+    <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.10.2/jquery.min.js"></script>
+    <script src="http://blueimp.github.io/Gallery/js/jquery.blueimp-gallery.min.js"></script>
+    <script src="./modules/Gallery/js/bootstrap-image-gallery.min.js"></script>
+
+        <script>
+        /**
+          * Check a href for an anchor. If exists, and in document, scroll to it.
+          * If href argument ommited, assumes context (this) is HTML Element,
+          * which will be the case when invoked by jQuery after an event
+          */
+        function scroll_if_anchor(href) {
+            href = typeof(href) == "string" ? href : $(this).attr("href");
+
+            // You could easily calculate this dynamically if you prefer
+            var fromTop = 80;
+
+            // If our Href points to a valid, non-empty anchor, and is on the same page (e.g. #foo)
+            // Legacy jQuery and IE7 may have issues: http://stackoverflow.com/q/1593174
+            if(href.indexOf("#") == 0) {
+                var $target = $(href);
+
+                // Older browser without pushState might flicker here, as they momentarily
+                // jump to the wrong position (IE < 10)
+                if($target.length) {
+                    $('html, body').animate({ scrollTop: $target.offset().top - fromTop });
+                    if(history && "pushState" in history) {
+                        history.pushState({}, document.title, window.location.pathname + href);
+                        return false;
+                    }
+                }
+            }
+        }    
+        // When our page loads, check to see if it contains and anchor
+        scroll_if_anchor(window.location.hash);
+
+        // Intercept all anchor clicks
+        $("body").on("click", "a", scroll_if_anchor);
+        </script>
+
+        <script>
+        function tintImage(imgElement,tintColor) {
+    // create hidden canvas (using image dimensions)
+    var canvas = document.createElement("canvas");
+    canvas.width = imgElement.offsetWidth;
+    canvas.height = imgElement.offsetHeight;
+
+    var ctx = canvas.getContext("2d");
+    ctx.drawImage(imgElement,0,0);
+
+    var map = ctx.getImageData(0,0,320,240);
+    var imdata = map.data;
+
+    // convert image to grayscale
+    var r,g,b,avg;
+    for(var p = 0, len = imdata.length; p < len; p+=4) {
+        r = imdata[p]
+        g = imdata[p+1];
+        b = imdata[p+2];
+        // alpha channel (p+3) is ignored           
+
+        avg = Math.floor((r+g+b)/3);
+
+        imdata[p] = imdata[p+1] = imdata[p+2] = avg;
+    }
+
+    ctx.putImageData(map,0,0);
+
+    // overlay filled rectangle using lighter composition
+    ctx.globalCompositeOperation = "lighter";
+    ctx.globalAlpha = 0.5;
+    ctx.fillStyle=tintColor;
+    ctx.fillRect(0,0,canvas.width,canvas.height);
+
+    // replace image source with canvas data
+    imgElement.src = canvas.toDataURL();
+}
+        </script>
+
+
+        
+
+  </body>
+</html>
+{% endautoescape %}

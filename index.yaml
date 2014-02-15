@@ -15,3 +15,10 @@ indexes:
   properties:
   - name: created_time
     direction: desc
+
+- kind: InstagramPost
+  ancestor: yes
+  properties:
+  - name: user
+  - name: created_time
+    direction: desc

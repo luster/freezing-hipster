@@ -5,18 +5,26 @@ api_version: 1
 threadsafe: true
 
 handlers:
-- url: /static/css
-  static_dir: static/css
+- url: /favicon.ico
+  static_files: favicon.ico
+  upload: favicon.ico
 
-- url: /.*
-  script: app.application
+- url: /static/*
+  static_dir: static/
+
+- url: /modules/*
+  static_dir: modules/
 
 - url: /admin/.*
-  script: admin.application
+  script: google.appengine.ext.admin.application
   login: admin
 
 - url: /callback/.*
   script: callback.application
+
+- url: /.*
+  script: app.application
+
 
 libraries:
 - name: webapp2

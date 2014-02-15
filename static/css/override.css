@@ -1,0 +1,265 @@
+/* ***************** */
+/* FONT PROPERTIES */
+/* ***************** */
+
+@media (min-width: 1200px) {
+    .container {
+        max-width: 2048px;
+    }
+}
+
+@font-face {
+    font-family: "tk-logo";
+    src: url("../fonts/kenyan_coffee_rg-webfont.ttf") format("truetype");
+}
+
+@font-face {
+    font-family: "tk-def";
+    src: url("../fonts/hero-webfont.ttf") format("truetype");
+}
+
+html * {
+    font-family: tk-def;
+}
+
+*, *:before, *:after {
+    -webkit-box-sizing: inherit;
+    box-sizing: inherit;
+}
+
+.container {
+    padding-right: 0;
+    padding-left: 0;
+    /*width: auto;*/
+}
+
+video {
+    display: block;
+    margin: auto;
+    width: inherit;
+    margin-top:80px;
+}
+
+#landing {
+    margin: auto;
+    width:100%;
+    padding: 0;
+}
+
+/* ***************** */
+/* NAVBAR PROPERTIES */
+/* ***************** */
+
+.navbar.navbar-default.navbar-fixed-top {
+    background-color: white;
+    /*border-color: black;*/
+    box-shadow: 0px 1px 20px #bbb;
+}
+
+.nav.navbar-nav.navbar-right {
+    font-family: tk-def;
+}
+
+.navbar-default .navbar-nav > li > a {
+    color: #9e9e9e;
+    font-size: 25px;
+}
+
+.navbar-default .navbar-nav > li > a:hover {
+    color: #dededf;
+    font-size: 25px;
+}
+
+
+ul.nav.navbar-nav.navbar-right li {
+    padding-top: 20px;
+    padding-bottom: 20px;
+    vertical-align: middle;
+    padding-left: 20px;
+    padding-right:40px;
+}
+
+ul.nav.navbar-nav.navbar-right li a + a:before {
+    padding-left: 20px !important;
+    padding-right: 20px !important;
+}
+
+
+#tk-nav,
+#tk-nav .container, 
+#tk-nav .navbar-collapse,
+#tk-nav ul .nav .navbar-nav{
+    height: 80px !important;
+}
+
+.navbar-nav>li>a {
+    padding-top: 10px !important;
+    padding-bottom: 10px !important;
+    vertical-align: middle;
+}
+
+
+/* LOGO */
+.logo {
+    background: url('../../static/img/Assets/TimeKing_Logo.png') no-repeat center center;
+    min-width:184px;
+    min-height:61px;
+}
+
+.logo:hover {
+    /*-webkit-filter: grayscale(100%);
+    filter: gray;
+    opacity: 0.6;*/
+    background: url('../../static/img/Assets/logo.png') no-repeat center center;
+    min-width:184px;
+    min-height:61px;
+}
+
+.lou-button:hover {
+    -webkit-filter: grayscale(100%);
+    filter: gray;
+    opacity: 0.2; 
+}
+
+/* ********* */
+/* CENTERING */
+/* ********* */
+
+.center-block {
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.center {
+    margin: 0 auto;
+    width: auto;
+    text-align: center;
+}
+
+/* **************************** */
+/* DIV BACKGROUNDS / PROPERTIES */
+/* **************************** */
+
+h1 {
+    font-size: 40px;
+}
+
+#tour h1 {
+    color: white;
+}
+
+#tour {
+    background: url('../../static/img/Assets/show_bg.jpg') no-repeat center center;
+    background-color: black;
+    background-size: contain;
+    min-height: 600px;
+    max-height: 600px;
+    width: inherit;
+}
+
+#contact {
+    background: url('../../static/img/Assets/contact_tile.jpg');
+    /*background-size: contain;*/
+    min-height: 600px;
+    width: inherit;
+}
+
+/*
+#music:before, #tour:before, #shop:before, #contact:before {
+    margin-top:-91px;
+    height:91px;
+    display: block;
+    content: " ";
+    visibility: hidden;
+}
+*/
+
+#music {
+    padding-top: 60px;
+    padding-bottom: 60px;
+}
+
+.bandcamp, .promo {
+    display: inline-block;
+    vertical-align: middle !important;
+}
+
+.bandcamp {
+    padding-right: 20px;
+}
+
+.promo {
+    background: url('./static/img/Assets/Music_Watson_02_01.png') no-repeat center center;
+    padding-left: 20px;
+}
+
+
+
+/* ************** */
+/* SOCIAL SPRITES */
+/* ************** */
+
+.social-sprites {
+    padding-bottom: 40px;
+    padding-top:40px;
+}
+
+.social-sprites ul {
+    display: inline;
+}
+
+.social-sprites ul li {
+    display: inline;
+    padding-left: 5px;
+    padding-right: 5px;
+}
+
+
+
+.clip {
+    background: url('../../static/img/Assets/Icon Sprites-01.png') no-repeat;
+    position: absolute;
+    top: 0;
+    left: 0;
+}
+
+h2, h3 {
+    font-family: tk-def;
+    color: white;
+}
+
+h2 {
+    text-transform: uppercase;
+    font-size: 25px;
+}
+
+h3 {
+    font-size: 20px;
+}
+
+.control-label {
+    color: white;
+}
+
+.tk-button {
+    background: url('../../static/img/Assets/Send_Sprite.png') no-repeat 100% 0;
+    top:0;
+    width: 57px;
+    height: 19px;
+    padding: 0;
+    border: 0;
+    position: relative;
+    margin-top:-15px;
+    float:right;
+}
+.tk-button:hover {
+    background: url('../../static/img/Assets/Send_Sprite.png') no-repeat 0 100%;
+    bottom:0;
+    width: 57px;
+    height: 19px;
+    padding: 0;
+    border: 0;
+    position: relative;
+    cursor: pointer;
+}

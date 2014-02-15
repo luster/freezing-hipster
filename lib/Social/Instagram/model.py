@@ -3,7 +3,7 @@ from google.appengine.ext import ndb
 class InstagramPost(ndb.Model):
     """Models an instagram post."""
 
-    # user = ndb.UserProperty()
+    user = ndb.UserProperty()
     username = ndb.StringProperty()
     #picture = ndb.BlobProperty(default=None)
     picture_URL = ndb.StringProperty()
