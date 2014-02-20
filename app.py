@@ -81,5 +81,5 @@ class MainPage(webapp2.RequestHandler):
 application = webapp2.WSGIApplication([
     ('/', MainPage),
     ('/callback', Callback),
-    ('/submit', Comment), 
+    ('/submit', Comment),
 ], debug=True)
