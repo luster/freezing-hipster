@@ -1,0 +1,62 @@
+<!-- Base template -->
+
+<!DOCTYPE html>
+{% autoescape true %}
+<html>
+    <head>
+        <link rel="stylesheet" type="text/css" href="./static/css/base.css">
+        <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.10.2/jquery.min.js"></script>
+        <title>Time King</title>
+    </head>
+    <body>
+        <div class="bg"></div>
+        <div class="bg2"></div>
+        <div class="container">
+            <div class="cent">
+                <h1>Time King</h1>
+
+
+
+
+            <div id="nav">
+                <ul>
+                    <li><a href="#music">Music</a></li>
+                    <li><a href="#tour">Tour</a></li>
+                    <li><a href="#media">Media</a></li>
+                    <li><a href="#blog">Blog</a></li>
+                    </ul>
+                </div>
+
+
+
+                <h2>Time King blah blah blah blah.</h2>
+                <!--
+            <iframe src="//instagram.com/p/jK40OjxaVH/embed/" width="612" height="710" frameborder="0" scrolling="no" allowtransparency="true"></iframe>
+            -->
+            <p>
+            Lorem ipsum dolor sit amet, consectetur adipiscing elit. Maecenas sed euismod nulla, et ultricies ante. Ut consectetur et lorem sit amet tempor. In hac habitasse platea dictumst. Sed vel iaculis sem. Cras leo tortor, posuere ac elementum in, scelerisque malesuada est. Nullam turpis urna, scelerisque in eleifend quis, elementum at felis. Sed sed sem lectus. Sed in leo elit. Aenean in porttitor urna. Mauris sed lacus neque.</p><p>
+
+            Vestibulum ante ipsum primis in faucibus orci luctus et ultrices posuere cubilia Curae; Pellentesque non tellus non nisi congue molestie quis in urna. Proin ac turpis pharetra, cursus sapien eget, consectetur odio. Nulla adipiscing cursus justo, ac laoreet metus iaculis a. Mauris a tortor vitae risus vehicula convallis. Vivamus tincidunt magna nisi, ac faucibus massa sagittis sed. Duis est velit, consectetur ac auctor vitae, aliquet at justo. Suspendisse eget dictum turpis.</p>
+            <p>
+
+            Sed accumsan est sed nibh interdum, id tincidunt tortor cursus. Integer enim nunc, ornare luctus mattis vitae, ornare id tortor. Sed ultrices ligula sit amet ornare euismod. Vestibulum sit amet nisl id lectus malesuada consectetur a id urna. Donec at pharetra dolor, nec pellentesque leo. Sed quis orci felis. In facilisis quis quam et ullamcorper.</p>
+            <p>
+            Curabitur lobortis, lectus eu pellentesque condimentum, turpis massa tempor felis, id adipiscing lacus lectus et libero. Aenean vitae lectus a nulla tristique mollis. Vestibulum ante ipsum primis in faucibus orci luctus et ultrices posuere cubilia Curae; Morbi sit amet luctus leo, sit amet vulputate sem. Cras tristique orci eget ante vehicula, in molestie eros sagittis. Pellentesque eget dui mollis, congue est at, rhoncus lacus. Pellentesque eu turpis vitae dui eleifend luctus id nec quam. Nullam vitae ultrices felis. Donec ut leo tincidunt diam commodo dapibus non nec purus. Pellentesque commodo condimentum pellentesque. Ut sed odio lobortis, sollicitudin erat eu, facilisis sem. Curabitur est tellus, sollicitudin eu auctor ut, fringilla non arcu. Etiam varius luctus justo vitae fermentum. Nam quis tempor quam, nec consectetur libero. Aliquam posuere mi dolor, nec cursus nisl congue eget. Sed quam nisl, varius eu pellentesque mollis, accumsan in libero.</p>
+            <p>
+            Donec sit amet purus ante. In aliquet enim vel lacinia lobortis. Cras lacinia turpis id urna tincidunt, sed rhoncus enim ullamcorper. Nunc at sapien in arcu fringilla placerat. Proin volutpat hendrerit neque, eu vulputate mauris tincidunt in. Vivamus ut rutrum nunc. In in lectus suscipit, cursus velit vel, fringilla nisi. Nulla eleifend lacus non sem consectetur ornare vel sed magna. Nunc congue augue quis imperdiet scelerisque. Vestibulum vulputate urna pharetra mi laoreet fermentum. Morbi egestas dolor et sapien vulputate, vel rhoncus neque dapibus.</p>
+            </div>
+        </div>
+        <script>
+            function parallax(){
+                var scrolled = $(window).scrollTop();
+                $('.bg').css('top', -(scrolled * 0.2) + 'px');
+                $('.bg2').css('top', -(scrolled * 0.1) + 'px');
+            }
+            $(window).scroll(function(e){
+                    parallax();
+            });
+        </script>
+
+    </body>
+</html>
+{% endautoescape %}

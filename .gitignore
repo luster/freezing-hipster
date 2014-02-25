@@ -4,3 +4,6 @@
 conf/apis.json
 conf/site-conf.json
 notes
+old/
+db_repository/
+flask/
