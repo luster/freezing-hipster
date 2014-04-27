@@ -1,5 +1,7 @@
 from flask import render_template
 from flask import send_from_directory
+from flask import redirect
+from flask.ext.login import LoginManager, current_user, login_required, login_user, logout_user
 from app import app
 from app.controllers import *
 
@@ -29,7 +31,6 @@ def index():
                 for f in os.listdir(merch_img_path)]
     merch = sorted(merch, key=lambda k: k['alt'])
 
-
     # show dates
     show_controller = ShowDateController()
     show_dates = show_controller.query_shows(4)
@@ -44,5 +45,18 @@ def index():
 
 @app.route('/favicon.ico')
 def favicon():
-    return send_from_directory(os.path.join(app.root_path, 'static'),
-            'favicon.ico', mimetype='image/vnd.microsoft.icon')
+    return send_from_directory(os.path.join(app.root_path, 'static'),'favicon.ico', mimetype='image/vnd.microsoft.icon')
+
+@app.route('/admin/')
+@login_required
+def admin():
+
+    return 'Admin'
+
+@app.route('/admin/login/', methods=["GET","POST"])
+def login():
+    if current_user.is_authenticated():
+        redirect('/admin')
+    else:
+        return render_template("login.html")
+

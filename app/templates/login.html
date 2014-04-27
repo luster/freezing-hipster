@@ -1,0 +1,43 @@
+{% extends "base.html" %}
+
+{% block content %}
+
+
+
+        <form class="form-horizontal" action="/submit">
+        <fieldset>
+
+        <!-- Form Name -->
+        <legend style="text-align:center;">TK Admin</legend>
+
+        <!-- Text input-->
+        <div class="form-group">
+          <label class="col-md-4 control-label" for="user">Username</label>
+          <div class="col-md-4">
+          <input id="user" name="user" type="text" placeholder="Username" class="form-control input-md" required="">
+
+          </div>
+        </div>
+
+        <!-- Password input-->
+        <div class="form-group">
+          <label class="col-md-4 control-label" for="pw">Password</label>
+          <div class="col-md-4">
+            <input id="pw" name="pw" type="password" placeholder="Password" class="form-control input-md">
+
+          </div>
+        </div>
+
+        <!-- Button -->
+        <div class="form-group">
+          <label class="col-md-4 control-label" for="submit"></label>
+          <div class="col-md-4">
+            <button id="submit" name="submit" class="btn btn-primary">Submit</button>
+          </div>
+        </div>
+
+        </fieldset>
+        </form>
+
+
+{% endblock %}

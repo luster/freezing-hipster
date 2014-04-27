@@ -2,11 +2,13 @@
 /* FONT PROPERTIES */
 /* ***************** */
 
-@media (min-width: 1200px) {
+@media (min-width: 1200px, max-width: 2048px) {
     .container {
         max-width: 2048px;
     }
 }
+
+
 
 @font-face {
     font-family: "tk-logo";
@@ -69,24 +71,8 @@ video {
     color: #dededf;
     font-size: 25px;
 }
-
-
-ul.nav.navbar-nav.navbar-right li {
-    padding-top: 20px;
-    padding-bottom: 20px;
-    vertical-align: middle;
-    padding-left: 20px;
-    padding-right:40px;
-}
-
-ul.nav.navbar-nav.navbar-right li a + a:before {
-    padding-left: 20px !important;
-    padding-right: 20px !important;
-}
-
-
 #tk-nav,
-#tk-nav .container, 
+#tk-nav .container,
 #tk-nav .navbar-collapse,
 #tk-nav ul .nav .navbar-nav{
     height: 80px !important;
@@ -97,6 +83,40 @@ ul.nav.navbar-nav.navbar-right li a + a:before {
     padding-bottom: 10px !important;
     vertical-align: middle;
 }
+
+@media (min-width: 767px, max-width: 991px) {
+    #tk-nav .container .navbar-collapse.collapse ul.nav.navbar-nav.navbar-right li,
+    .navbar-nav > li{
+        padding-top: 20px !important;
+        padding-bottom: 20px !important;
+        vertical-align: middle !important;
+        padding-left: 20px !important;
+        padding-right:20px !important;
+        height: 80px !important;
+}
+
+    #tk-nav .container .navbar-collapse.collapse ul.nav.navbar-nav.navbar-right li a + a:before {
+        padding-left: 10px !important;
+        padding-right: 10px !important;
+    }
+}
+
+@media (min-width: 992px) {
+    ul.nav.navbar-nav.navbar-right li {
+        padding-top: 20px !important;
+        padding-bottom: 20px !important;
+        vertical-align: middle !important;
+        padding-left: 20px !important;
+        padding-right:40px !important;
+    }
+
+    ul.nav.navbar-nav.navbar-right li a + a:before {
+        padding-left: 20px !important;
+        padding-right: 20px !important;
+    }
+}
+
+
 
 
 /* LOGO */
@@ -118,7 +138,7 @@ ul.nav.navbar-nav.navbar-right li a + a:before {
 .lou-button:hover {
     -webkit-filter: grayscale(100%);
     filter: gray;
-    opacity: 0.2; 
+    opacity: 0.2;
 }
 
 /* ********* */
