@@ -1,5 +1,8 @@
 from models import *
 from sqlalchemy.sql import text
+import urllib2
+import json
+from datetime import datetime
 
 class CommentFormController:
 
@@ -27,15 +30,10 @@ class ShowDateController:
 
         db.session.commit()
 
-    def query_shows(self, limit):
+    def query_shows(self, limit=4):
 
         shows = []
 
-        # shows_qry = db.engine.execute(text("""
-        #         SELECT * FROM show_date
-        #         ORDER BY date_time DESC
-        #         LIMIT :limit;
-        #         """), limit=str(limit))
         shows_qry = ShowDate.query.order_by('date_time desc').limit(limit)
         shows_qry = shows_qry[:limit]
 
@@ -50,6 +48,40 @@ class ShowDateController:
                 })
 
         return shows
+
+class BandsInTownController:
+
+    def __init__(self):
+        pass
+
+    def query_shows(self):
+        url = 'http://api.bandsintown.com/artists/Time%20King/events.json?api_version=2.0&app_id=tk-site'
+        shows = []
+
+        try:
+            res = urllib2.urlopen(url).read()
+            data = json.loads(res)
+            for show in data:
+                dt = datetime.strptime(show['datetime'],'%Y-%m-%dT%H:%M:%S')
+                time = dt.strftime(' %I:%M %p').replace(' 0','').lower().replace(' ','')
+                date = dt.strftime('%B %d').replace(' 0',' ')
+
+                venue = show['venue']['name']
+                city = show['venue']['city'] + ', ' + show['venue']['region']
+
+                shows.append({
+                            'time': time,
+                            'date': date,
+                            'venue': venue,
+                            'city': city
+                            })
+
+            return shows
+
+        except:
+            return []
+
+
 
 class MerchController:
 

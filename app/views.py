@@ -32,8 +32,8 @@ def index():
     merch = sorted(merch, key=lambda k: k['alt'])
 
     # show dates
-    show_controller = ShowDateController()
-    show_dates = show_controller.query_shows(4)
+    show_controller = BandsInTownController()
+    show_dates = show_controller.query_shows()
 
     # set context variables
     context = {}
