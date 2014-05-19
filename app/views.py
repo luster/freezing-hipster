@@ -47,16 +47,17 @@ def index():
 def favicon():
     return send_from_directory(os.path.join(app.root_path, 'static'),'favicon.ico', mimetype='image/vnd.microsoft.icon')
 
-@app.route('/admin/')
-@login_required
-def admin():
-
-    return 'Admin'
-
-@app.route('/admin/login/', methods=["GET","POST"])
-def login():
-    if current_user.is_authenticated():
-        redirect('/admin')
-    else:
-        return render_template("login.html")
-
+#TODO: admin interface to enable/disable content blocks 
+# and other settings
+#@app.route('/admin/')
+#@login_required
+#def admin():
+#
+#    return 'Admin'
+#
+#@app.route('/admin/login/', methods=["GET","POST"])
+#def login():
+#    if current_user.is_authenticated():
+#        redirect('/admin')
+#    else:
+#        return render_template("login.html")
