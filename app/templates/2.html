@@ -1,0 +1,111 @@
+{% extends "base_2.html" %}
+
+{% block content %}
+<!-- Navigation -->
+<div id="nav">
+    <table><tbody>
+        <tr>
+            <td id="logo">
+                <a href="#landing">
+                    <div id="logodiv"></div>
+                </a>
+            </td>
+            {% for item in context.top_nav %}
+            <td class="navitem">
+                <a href="#{{item}}">{{item}}</a>
+            </td>
+            {% endfor %}
+        </tr>
+    </tbody></table>
+</div>
+
+<!-- Landing -->
+<div id="landing">
+    <video autoplay>
+        <source src="/static/img/Assets/landing.mp4" type="video/mp4">
+        <object data="/static/img/Assets/landing.mp4">
+            <embed src="/static/img/Assets/landing.mp4">
+            </object>
+        </video>
+    </div>
+
+    <!-- Music -->
+    <div id="music">
+        <div id="promo">
+            <img src="/static/img/Assets/Music_Watson_02_01.png" alt="Time King LP Coming Soon!">
+        </div>
+    </div>
+
+    <!-- Tour -->
+    <div id="tour">
+        <h1>Show Dates</h1>
+
+        {% if context.show_dates %}
+        {% for show in context.show_dates %}
+        <h2>
+            {{show.date}}
+        </h2>
+        <h3>
+            {{show.venue}}<br>
+            {{show.city}}<br>
+            {{show.time}}
+        </h3>
+        {% endfor %}
+        {% else %}
+        <h2>No shows at the moment.<br>Check back later!</h2>
+        {% endif %}
+    </div>
+
+    <!-- Shop -->
+    <div id="shop">
+        <h1>Online Store Coming Soon!</h1>
+
+        <div id="merch-gallery">
+            {% for item in context.merch %}
+            <a href="{{item.href}}" title="{{item.alt}}">
+                <img src="{{item.href}}" alt="{{item.alt}}">
+            </a>
+            {% endfor %}
+        </div>
+    </div>
+
+    <!-- Contact -->
+    <div id="contact">
+
+        <!-- Social Sprites -->
+        <table><tbody>
+            <tr>
+                {% for sprite in context.social_sprites %}
+                <td>
+                    <a href="{{sprite.href}}">
+                        <img src="{{sprite.src}}" alt="{{sprite.alt}}">
+                    </a>
+                </td>
+                {% endfor %}
+            </tr>
+        </tbody></table>
+
+        <!-- Mailing Form -->
+        <form id="mailing-form" action="https://docs.google.com/forms/d/1YqR5narHyBcg3oHBBeU0e5hL2fhLapu0D16DZZXx3yI/formResponse" method="POST">
+            <label for="First Name">First Name</label>
+            <input type="text" name="" id="first-name" /><br>
+
+            <label for="Last Name">Last Name</label>
+            <input type="text" name="" id="last-name" /><br>
+
+            <label for="Email">Email</label>
+            <input type="text" name="" id="email" /><br>
+
+            <label for="Phone Number">Phone Number</label>
+            <input type="text" name="" id="phone-number" /><br>
+
+            <label for="Comments">Comments</label><br />
+            <textarea name="" rows="20" cols="10" id="comment"></textarea>
+
+            <input type="submit" class="submit-button" />
+
+        </form>
+
+    </div>
+
+    {% endblock %}

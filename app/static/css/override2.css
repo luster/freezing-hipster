@@ -1,0 +1,179 @@
+@font-face {
+    font-family: "tk-logo";
+    src: url("/static/fonts/kenyan_coffee_rg-webfont.ttf") format("truetype");
+}
+
+@font-face {
+    font-family: "tk-text";
+    src: url("/static/fonts/hero-webfont.ttf") format("truetype");
+}
+
+body {
+    position: relative;
+    padding-top: 80px;
+    margin: 0;
+}
+a {
+    text-decoration: none;
+}
+
+/* NAV BAR */
+#nav {
+    height: 80px;
+    width: 100%;
+    top: 0;
+    left: 0;
+    position: fixed;
+    display: table;
+    box-shadow: 0px 1px 20px #bbb;
+    background-color: white;
+    z-index: 1;
+}
+
+#nav table {
+    margin: 5px auto;
+}
+
+#logo {
+    padding-right: 60px;
+}
+
+#logodiv {
+    background: url("/static/img/Assets/TimeKing_Logo.png") no-repeat center center;
+    width: 184px;
+    height: 61px;
+}
+
+#logodiv:hover {
+    background: url("/static/img/Assets/logo.png") no-repeat center center;
+    width: 184px;
+    height: 61px;
+}
+
+
+.navitem {
+    text-transform: uppercase;
+    font-family: tk-text;
+    font-size: 25px;
+}
+
+.navitem + .navitem {
+    padding-left: 30px;
+}
+
+.navitem a {
+    color: #9E9E9E;
+}
+
+.navitem a:hover {
+    color: #DEDEDF;
+}
+
+/* VIDEO */
+video {
+    width: inherit;
+}
+
+#landing {
+    width: 100%;
+    left: 0;
+    margin-top: -5px;
+}
+
+/* MUSIC */
+#music {
+    padding: 60px;
+}
+
+#promo img {
+    display: block;
+    margin: 0 auto;
+}
+
+/* TOUR */
+#tour {
+    background: url('../../static/img/Assets/show_bg.jpg') no-repeat center center;
+    background-color: black;
+    background-size: contain;
+    min-height: 600px;
+    max-height: 600px;
+    width: inherit;
+}
+
+#tour h1 {
+    color: white;
+    margin: 0;
+}
+
+#tour h2, h3 {
+    color: white;
+}
+
+#tour h2 {
+    font-size: 25px;
+}
+
+#tour h3 {
+    font-size: 20px;
+}
+
+h1, h2, h3 {
+    text-align: center;
+}
+
+h1 {
+    font-size: 40px;
+    padding-top: 40px;
+    padding-bottom: 40px;
+    font-family: tk-logo;
+    text-transform: uppercase;
+}
+
+h2, h3 {
+    font-family: tk-text;
+}
+
+/* SHOP */
+#shop {
+    width: 850px;
+    margin: 0 auto;
+}
+#shop h1 {
+    color: black;
+}
+
+#shop #merch-gallery a img {
+    width: 275px;
+    height: auto;
+}
+
+/* CONTACT */
+#contact {
+    background: url('../../static/img/Assets/contact_tile.jpg');
+    min-height: 600px;
+}
+
+#contact table {
+    padding-top: 40px;
+    padding-bottom: 40px;
+    margin: 0 auto;
+}
+
+#contact table tr td + td {
+    padding-left: 10px;
+}
+
+#contact table tr td a img:hover {
+    -webkit-filter: grayscale(100%);
+    filter: gray;
+    opacity: 0.2;
+}
+
+#mailing-form {
+    text-align: center;
+}
+
+#mailing-form label {
+    font-family: tk-text;
+    color: white;
+}

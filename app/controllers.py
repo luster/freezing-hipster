@@ -35,7 +35,40 @@ class BandsInTownController:
         except:
             return []
 
+class SocialSpritesController:
 
+    def __init__(self):
+        pass
+
+    def get_social_sprites(self):
+        path = '/static/img/Assets/social/'
+
+        social = [
+            {
+                'alt': 'YouTube',
+                'href': '//youtube.com/timekingofficial',
+            }, {
+                'alt': 'Instagram',
+                'href': '//instagram.com/timekingofficial',
+            }, {
+                'alt': 'Twitter',
+                'href': '//twitter.com/timekingband',
+            }, {
+                'alt': 'Facebook',
+                'href': '//facebook.com/timekingofficial',
+            }, {
+                'alt': 'Bandcamp',
+                'href': '//timekingofficial.bandcamp.com',
+            },]# {
+               # 'alt': 'Vine',
+               # 'href': '//vine.co/search/timeking',
+           # },
+       # ]
+
+        for i in social:
+            i.update({'src': path + i['alt'].lower() + '.png'})
+
+        return social
 
 #TODO: interface merch store API with merch img gallery
 class MerchController:
