@@ -173,7 +173,34 @@ h2, h3 {
     text-align: center;
 }
 
-#mailing-form label {
+#mailing-form label, h2, h3 {
     font-family: tk-text;
     color: white;
+}
+
+#mailing-form label {
+    float: right;
+}
+
+#submit-button {
+    background: url('/static/img/Assets/Send_Sprite.png') no-repeat 100% 0;
+    top:0;
+    width: 57px;
+    height: 19px;
+    padding: 0;
+    border: 0;
+    position: relative;
+    margin-top:-15px;
+    float:right;
+}
+
+#submit-button:hover {
+    background: url('../../static/img/Assets/Send_Sprite.png') no-repeat 0 100%;
+    bottom:0;
+    width: 57px;
+    height: 19px;
+    padding: 0;
+    border: 0;
+    position: relative;
+    cursor: pointer;
 }

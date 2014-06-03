@@ -1,11 +1,14 @@
 from flask import render_template
 from flask import send_from_directory
 from flask import redirect
+from flask import request
+from flask import jsonify
 from flask.ext.login import LoginManager, current_user, login_required, login_user, logout_user
 from app import app
 from app.controllers import *
 
 import os
+import requests
 
 PROJECT_DIR = os.path.dirname(__file__)
 
@@ -89,7 +92,18 @@ def index_2():
 def favicon():
     return send_from_directory(os.path.join(app.root_path, 'static'),'favicon.ico', mimetype='image/vnd.microsoft.icon')
 
-#TODO: admin interface to enable/disable content blocks 
+@app.route('/submit', methods=['POST'])
+def submit():
+    form = dict(request.form)
+
+    data = {key:form[key][0] for key in form}
+
+    r = requests.post("https://docs.google.com/forms/d/1YqR5narHyBcg3oHBBeU0e5hL2fhLapu0D16DZZXx3yI/formResponse", params=data)
+
+    return redirect("/2", code=200)
+
+
+#TODO: admin interface to enable/disable content blocks
 # and other settings
 #@app.route('/admin/')
 #@login_required
