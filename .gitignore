@@ -1,9 +1,4 @@
 *.py[cod]
 .DS_Store
 *.*.swp
-conf/apis.json
-conf/site-conf.json
-notes
-old/
-db_repository/
-flask/
+env/
