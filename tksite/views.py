@@ -16,24 +16,16 @@ def home(request):
             ]
 
     # get merch images, sort them, set alt text
-    # TODO: put this in a separate controller
-    # TODO: merch modeling for store
-    merch_img_path = os.path.join(PROJECT_DIR,
-            'static', 'img', 'merch')
-    paths = './static/img/merch/'
-    merch = [{
-                'href':paths+f,
-                'alt': f.replace('_',' ').replace('.jpg','')}
-                for f in os.listdir(merch_img_path)]
-    merch = sorted(merch, key=lambda k: k['alt'])
+    mc = MerchController(PROJECT_DIR)
+    merch = mc.get_merch()
 
     # show dates
-    show_controller = BandsInTownController()
-    show_dates = show_controller.query_shows()
+    sc = BandsInTownController()
+    show_dates = sc.query_shows()
 
     # social sprites
-    social_sprites_controller = SocialSpritesController()
-    social_sprites = social_sprites_controller.get_social_sprites()
+    ssc = SocialSpritesController()
+    social_sprites = ssc.get_social_sprites()
 
     # set context variables
     context = {}

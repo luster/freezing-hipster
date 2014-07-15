@@ -1,11 +1,11 @@
 @font-face {
     font-family: "tk-logo";
-    src: url("/static/fonts/kenyan_coffee_rg-webfont.ttf") format("truetype");
+    src: url("/static/font/kenyan_coffee_rg-webfont.ttf") format("truetype");
 }
 
 @font-face {
     font-family: "tk-text";
-    src: url("/static/fonts/hero-webfont.ttf") format("truetype");
+    src: url("/static/font/hero-webfont.ttf") format("truetype");
 }
 
 body {
@@ -39,17 +39,23 @@ a {
 }
 
 #logodiv {
-    background: url("/static/img/Assets/TimeKing_Logo.png") no-repeat center center;
+    background: url("/static/img/logo.png") no-repeat center center;
     width: 184px;
     height: 61px;
+
 }
 
 #logodiv:hover {
-    background: url("/static/img/Assets/logo.png") no-repeat center center;
+    background: url("/static/img/logo-hover.png") no-repeat center center;
     width: 184px;
     height: 61px;
 }
 
+#logodiv {
+    transition-property: background;
+    transition-duration: 0.3s;
+    transition-timing-function: ease;
+}
 
 .navitem {
     text-transform: uppercase;
@@ -67,6 +73,12 @@ a {
 
 .navitem a:hover {
     color: #DEDEDF;
+}
+
+.navitem a {
+    transition-property: color;
+    transition-duration: 0.3s;
+    transition-timing-function: ease;
 }
 
 /* VIDEO */
@@ -92,7 +104,7 @@ video {
 
 /* TOUR */
 #tour {
-    background: url('../../static/img/Assets/show_bg.jpg') no-repeat center center;
+    background: url('/static/img/bg-show.jpg') no-repeat center center;
     background-color: black;
     background-size: contain;
     min-height: 600px;
@@ -149,7 +161,7 @@ h2, h3 {
 
 /* CONTACT */
 #contact {
-    background: url('../../static/img/Assets/contact_tile.jpg');
+    background: url('/static/img/contact-tile.jpg') repeat center center;
     min-height: 600px;
 }
 
@@ -163,9 +175,14 @@ h2, h3 {
     padding-left: 10px;
 }
 
+#contact table tr td a img {
+    opacity: 1;
+    transition-property: opacity;
+    transition-duration: 0.3s;
+    transition-timing-function: ease;
+}
+
 #contact table tr td a img:hover {
-    -webkit-filter: grayscale(100%);
-    filter: gray;
     opacity: 0.2;
 }
 
@@ -183,24 +200,35 @@ h2, h3 {
 }
 
 #submit-button {
-    background: url('/static/img/Assets/Send_Sprite.png') no-repeat 100% 0;
-    top:0;
+    /*background: url('/static/img/send-sprite.png') no-repeat 100% 0;*/
+    background: url('/static/img/send-sprite.png') no-repeat;
     width: 57px;
     height: 19px;
     padding: 0;
     border: 0;
     position: relative;
-    margin-top:-15px;
+    margin-top:-10px;
+    margin-right:2px;
     float:right;
 }
 
-#submit-button:hover {
-    background: url('../../static/img/Assets/Send_Sprite.png') no-repeat 0 100%;
-    bottom:0;
+#submit-button span {
+    background: url('/static/img/send-sprite.png') no-repeat;
+    background-position: 0 -19px;
+    top:0;left:0;bottom:0;right:0;
     width: 57px;
     height: 19px;
-    padding: 0;
-    border: 0;
-    position: relative;
+    position: absolute;
+    opacity: 0;
+    transition-property: opacity;
+    transition-duration: 0.3s;
+    transition-timing-function: ease;
+}
+
+#submit-button:hover {
     cursor: pointer;
+}
+
+#submit-button span:hover {
+    opacity: 1;
 }

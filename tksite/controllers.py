@@ -1,5 +1,6 @@
 import urllib2
 import json
+import os
 from datetime import datetime
 
 class BandsInTownController:
@@ -28,19 +29,14 @@ class BandsInTownController:
                             'venue': venue,
                             'city': city
                             })
-
             return shows
-
         except:
             return []
 
 class SocialSpritesController:
 
-    def __init__(self):
-        pass
-
     def get_social_sprites(self):
-        path = '/static/img/Assets/social/'
+        path = '/static/img/social/'
 
         social = [
             {
@@ -72,8 +68,24 @@ class SocialSpritesController:
 #TODO: interface merch store API with merch img gallery
 class MerchController:
 
-    def __init__(self):
-        pass
+    def __init__(self, PROJECT_DIR):
+        self.PROJECT_DIR = PROJECT_DIR
+
+    def get_merch(self):
+
+        merch_img_path = os.path.join(self.PROJECT_DIR,
+                'static', 'img', 'merch')
+        path = './static/img/merch/'
+        merch = [
+            {
+                'href': path+f,
+                'alt': f.replace('_',' ').replace('.jpg','')
+            }
+                for f in os.listdir(merch_img_path)
+        ]
+        merch = sorted(merch, key=lambda k: k['alt'])
+
+        return merch
 
 #TODO: make the comment form submit to email or something
 class CommentFormController:
