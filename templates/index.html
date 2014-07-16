@@ -6,13 +6,13 @@
     <table><tbody>
         <tr>
             <td id="logo">
-                <a href="#landing">
+                <a onClick="navScroll('#landing');">
                     <div id="logodiv"></div>
                 </a>
             </td>
             {% for item in top_nav %}
             <td class="navitem">
-                <a href="#{{item}}">{{item}}</a>
+                <a onClick="navScroll('#{{item}}');">{{item}}</a>
             </td>
             {% endfor %}
         </tr>
@@ -42,7 +42,7 @@
 
     {% if show_dates %}
         {% for show in show_dates %}
-        <h2>
+        <h2 id="show-date">
             {{show.date}}
         </h2>
         <h3>
@@ -52,7 +52,7 @@
         </h3>
         {% endfor %}
         {% else %}
-        <h2>No shows at the moment.<br>Check back later!</h2>
+        <h3>No shows at the moment.<br>Check back later!</h3>
     {% endif %}
 </div>
 

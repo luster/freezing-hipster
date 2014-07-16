@@ -47,7 +47,7 @@
   * If href argument ommited, assumes context (this) is HTML Element,
   * which will be the case when invoked by jQuery after an event
   */
-function scroll_if_anchor(href) {
+function navScroll(href) {
     href = typeof(href) == "string" ? href : $(this).attr("href");
 
     // You could easily calculate this dynamically if you prefer
@@ -63,17 +63,17 @@ function scroll_if_anchor(href) {
         if($target.length) {
             $('html, body').animate({ scrollTop: $target.offset().top - fromTop });
             if(history && "pushState" in history) {
-                history.pushState({}, document.title, window.location.pathname + href);
+                //history.pushState({}, document.title, window.location.pathname + href);
                 return false;
             }
         }
     }
 }
 // When our page loads, check to see if it contains and anchor
-scroll_if_anchor(window.location.hash);
+// scroll_if_anchor(window.location.hash);
 
 // Intercept all anchor clicks
-$("body").on("click", "a", scroll_if_anchor);
+// $("body").on("click", "a", navScroll);
 </script>
 
 <script>
@@ -86,6 +86,7 @@ $("body").on("click", "a", scroll_if_anchor);
         blueimp.Gallery(links, options);
     };
 </script>
+
   </body>
 </html>
 

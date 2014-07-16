@@ -49,6 +49,7 @@ a {
     background: url("/static/img/logo-hover.png") no-repeat center center;
     width: 184px;
     height: 61px;
+    cursor:pointer;
 }
 
 #logodiv {
@@ -73,6 +74,7 @@ a {
 
 .navitem a:hover {
     color: #DEDEDF;
+    cursor:pointer;
 }
 
 .navitem a {
@@ -94,6 +96,11 @@ video {
 
 /* MUSIC */
 #music {
+    /*padding: 60px;*/
+    width:100%;
+}
+
+#promo {
     padding: 60px;
 }
 
@@ -125,8 +132,14 @@ video {
     font-size: 25px;
 }
 
+#tour h2 {
+    text-transform: uppercase;
+    margin-bottom: 5px;
+}
+
 #tour h3 {
     font-size: 20px;
+    margin-top: 0px;
 }
 
 h1, h2, h3 {
@@ -136,7 +149,7 @@ h1, h2, h3 {
 h1 {
     font-size: 40px;
     padding-top: 40px;
-    padding-bottom: 40px;
+    padding-bottom: 20px;
     font-family: tk-logo;
     text-transform: uppercase;
 }
