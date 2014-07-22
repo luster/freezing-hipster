@@ -12,7 +12,7 @@
     <link rel="shortcut icon" href="/assets/img/favicon.ico">
 
     <link rel="stylesheet" href="//blueimp.github.io/Gallery/css/blueimp-gallery.min.css">
-    <link href="/static/css/style.css" rel="stylesheet" type="text/css">
+    <link href="/css/style.css" rel="stylesheet" type="text/css">
 
 
     <!-- HTML5 shim and Respond.js IE8 support of HTML5 elements and media queries -->
@@ -37,16 +37,11 @@
         <div id="nav">
             <table><tbody>
                 <tr>
-                    <td id="logo">
-                        <a onClick="navScroll('#landing');">
-                            <div id="logodiv"></div>
-                        </a>
-                    </td>
-                    {% for item in top_nav %}
-                    <td class="navitem">
-                        <a onClick="navScroll('#{{item}}');">{{item}}</a>
-                    </td>
-                    {% endfor %}
+                    <td id="logo"><a onClick="navScroll('#landing');"><div id="logodiv"></div></a></td>
+                    <td class="navitem"><a onClick="navScroll('#music');">music</a></td>
+                    <td class="navitem"><a onClick="navScroll('#tour');">tour</a></td>
+                    <td class="navitem"><a onClick="navScroll('#shop');">shop</a></td>
+                    <td class="navitem"><a onClick="navScroll('#contact');">contact</a></td>
                 </tr>
             </tbody></table>
         </div>
@@ -170,7 +165,7 @@
 {% endblock %}
 
 <script src="//code.jquery.com/jquery-1.10.2.min.js"></script>
-<script src="/static/js/blueimp-gallery.min.js"></script>
+<script src="/js/blueimp-gallery.min.js"></script>
 
 <script>
 /**
