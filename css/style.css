@@ -223,6 +223,7 @@ input, textarea {
     float: right;
     padding: 0;
     max-width: 270px;
+    font-family: tk-text;
 }
 
 input:focus, textarea:focus {
