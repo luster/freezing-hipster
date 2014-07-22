@@ -1,11 +1,11 @@
 @font-face {
     font-family: "tk-logo";
-    src: url("/static/font/kenyan_coffee_rg-webfont.ttf") format("truetype");
+    src: url("/assets/font/kenyan_coffee_rg-webfont.ttf") format("truetype");
 }
 
 @font-face {
     font-family: "tk-text";
-    src: url("/static/font/hero-webfont.ttf") format("truetype");
+    src: url("/assets/font/hero-webfont.ttf") format("truetype");
 }
 
 body {
@@ -39,14 +39,14 @@ a {
 }
 
 #logodiv {
-    background: url("/static/img/logo.png") no-repeat center center;
+    background: url("/assets/img/logo.png") no-repeat center center;
     width: 184px;
     height: 61px;
 
 }
 
 #logodiv:hover {
-    background: url("/static/img/logo-hover.png") no-repeat center center;
+    background: url("/assets/img/logo-hover.png") no-repeat center center;
     width: 184px;
     height: 61px;
     cursor:pointer;
@@ -111,7 +111,7 @@ video {
 
 /* TOUR */
 #tour {
-    background: url('/static/img/bg-show.jpg') no-repeat center center;
+    background: url('/assets/img/bg-show.jpg') no-repeat center center;
     background-color: black;
     background-size: contain;
     min-height: 600px;
@@ -174,7 +174,7 @@ h2, h3 {
 
 /* CONTACT */
 #contact {
-    background: url('/static/img/contact-tile.jpg') repeat center center;
+    background: url('/assets/img/contact-tile.jpg') repeat center center;
     min-height: 600px;
 }
 
@@ -234,8 +234,8 @@ input { height: 1.5em; }
 textarea { height: 10em;}
 
 #submit-button {
-    /*background: url('/static/img/send-sprite.png') no-repeat 100% 0;*/
-    background: url('/static/img/send-sprite.png') no-repeat;
+    /*background: url('/assets/img/send-sprite.png') no-repeat 100% 0;*/
+    background: url('/assets/img/send-sprite.png') no-repeat;
     width: 57px;
     height: 19px;
     padding: 0;
@@ -247,7 +247,7 @@ textarea { height: 10em;}
 }
 
 #submit-button span {
-    background: url('/static/img/send-sprite.png') no-repeat;
+    background: url('/assets/img/send-sprite.png') no-repeat;
     background-position: 0 -19px;
     top:0;left:0;bottom:0;right:0;
     width: 57px;
