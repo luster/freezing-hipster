@@ -1,6 +1,0 @@
-[submodule "modules/Gallery"]
-	path = modules/Gallery
-	url = git@github.com:blueimp/Gallery.git
-[submodule "modules/Bootstrap-Image-Gallery"]
-	path = modules/Bootstrap-Image-Gallery
-	url = git@github.com:blueimp/Bootstrap-Image-Gallery.git
