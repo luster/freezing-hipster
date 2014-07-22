@@ -1,3 +1,3 @@
 # freezing-hipster
 
-Time King website. Runs on Django.
+Time King website.
