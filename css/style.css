@@ -8,26 +8,49 @@
     src: url("/assets/font/hero-webfont.ttf") format("truetype");
 }
 
-body {
-    position: relative;
-    padding-top: 80px;
+* {
     margin: 0;
+    padding: 0;
 }
+
+body {
+    font-family: "tk-text";
+}
+
 a {
     text-decoration: none;
 }
 
 /* NAV BAR */
+.slicknav_menu {
+    background: #AAA;
+}
+
+.js #menu {
+    display: block;
+}
+
+.js .slicknav_menu {
+    display: none;
+}
+
+#mobile-logo {
+    margin: 10px auto;
+}
+
+#menu { display: none;}
+
 #nav {
     height: 80px;
     width: 100%;
     top: 0;
     left: 0;
     position: fixed;
-    display: table;
+    display: none;
     box-shadow: 0px 1px 20px #bbb;
     background-color: white;
     z-index: 1;
+    opacity: 0.9;
 }
 
 #nav table {
@@ -38,21 +61,21 @@ a {
     padding-right: 60px;
 }
 
-#logodiv {
+.logodiv {
     background: url("/assets/img/logo.png") no-repeat center center;
     width: 184px;
     height: 61px;
 
 }
 
-#logodiv:hover {
+.logodiv:hover {
     background: url("/assets/img/logo-hover.png") no-repeat center center;
     width: 184px;
     height: 61px;
     cursor:pointer;
 }
 
-#logodiv {
+.logodiv {
     transition-property: background;
     transition-duration: 0.3s;
     transition-timing-function: ease;
@@ -86,17 +109,40 @@ a {
 /* VIDEO */
 video {
     width: inherit;
+    display: none;
 }
 
-#landing {
+#mobile-landing {
+    background: url('/assets/img/landing-mobile.jpg') no-repeat right center;
+    width: 100%;
+    height: 320px;
+    background-color: black;
+    display: block;
+    background-size: contain;
+    right: 0;
+}
+
+#landing-section {
     width: 100%;
     left: 0;
     margin-top: -5px;
 }
 
+@media screen and (min-width:1024px) {
+    video { display: block; }
+    #mobile-landing { display: none;}
+    #shop-section #merch-gallery a img { width: 250px;}
+    #mobile-nav { display: none; }
+    .slicknav_menu {display: none;}
+    #nav {display: table;}
+    body { padding-top: 80;}
+    .anchor {top: -80px;}
+}
+
 /* MUSIC */
-#music {
+#music-section {
     width:100%;
+    position: relative;
 }
 
 #promo {
@@ -109,7 +155,7 @@ video {
 }
 
 /* TOUR */
-#tour {
+#tour-section {
     background: url('/assets/img/bg-show.jpg') no-repeat center center;
     background-color: black;
     background-size: contain;
@@ -118,25 +164,25 @@ video {
     width: inherit;
 }
 
-#tour h1 {
+#tour-section h1 {
     color: white;
     margin: 0;
 }
 
-#tour h2, h3 {
+#tour-section h2, h3 {
     color: white;
 }
 
-#tour h2 {
+#tour-section h2 {
     font-size: 25px;
 }
 
-#tour h2 {
+#tour-section h2 {
     text-transform: uppercase;
     margin-bottom: 5px;
 }
 
-#tour h3 {
+#tour-section h3 {
     font-size: 20px;
     margin-top: 0px;
 }
@@ -147,10 +193,11 @@ h1, h2, h3 {
 
 h1 {
     font-size: 40px;
-    padding-top: 40px;
+    padding-top: 20px;
     padding-bottom: 20px;
     font-family: tk-logo;
     text-transform: uppercase;
+    margin: 0 auto;
 }
 
 h2, h3 {
@@ -158,44 +205,54 @@ h2, h3 {
 }
 
 /* SHOP */
-#shop {
-    width: 850px;
+#shop-section {
+    width: 100%;
     margin: 0 auto;
+    padding: 0;
 }
-#shop h1 {
+
+#shop-section h1 {
     color: black;
 }
 
-#shop #merch-gallery a img {
-    width: 275px;
+#merch-gallery {
+    margin: 0 auto;
+    max-width: 62%;
+    text-align: center;
+}
+
+#shop-section #merch-gallery a img {
+    width: 250px;
     height: auto;
+    margin: auto;
+    display: inline-block;
 }
 
 /* CONTACT */
-#contact {
+#contact-section {
     background: url('/assets/img/contact-tile.jpg') repeat center center;
     min-height: 600px;
 }
 
-#contact table {
+#contact-section table {
     padding-top: 40px;
     padding-bottom: 40px;
     margin: 0 auto;
     max-width: 640px;
 }
 
-#contact table tr td + td {
+#contact-section table tr td + td {
     padding-left: 10px;
 }
 
-#contact table tr td a img {
+#contact-section table tr td a img {
     opacity: 1;
     transition-property: opacity;
     transition-duration: 0.3s;
     transition-timing-function: ease;
 }
 
-#contact table tr td a img:hover {
+#contact-section table tr td a img:hover {
     opacity: 0.2;
 }
 
@@ -210,6 +267,7 @@ h2, h3 {
 
 #mailing-form label {
     float: right;
+    font-size: 20px;
 }
 
 input, textarea {
@@ -223,6 +281,7 @@ input, textarea {
     padding: 0;
     max-width: 270px;
     font-family: tk-text;
+    font-size: 16px;
 }
 
 input:focus, textarea:focus {
@@ -265,4 +324,21 @@ textarea { height: 10em;}
 
 #submit-button span:hover {
     opacity: 1;
+}
+
+.anchor {
+    display: block;
+    position: absolute;
+    width: 0;
+    height: 0;
+    z-index: -1;
+    top: -47px;
+    left: 0;
+    visibility: hidden;
+}
+
+.section {
+    position: relative;
+    margin: 0;
+    padding: 0;
 }

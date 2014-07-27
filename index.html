@@ -10,9 +10,9 @@
     <title>Time King</title>
 
     <link rel="shortcut icon" href="/assets/img/favicon.ico">
-
     <link rel="stylesheet" href="//blueimp.github.io/Gallery/css/blueimp-gallery.min.css">
-    <link href="/css/style.min.css" rel="stylesheet" type="text/css">
+    <link rel="stylesheet" href="/css/slicknav.css" />
+    <link href="/css/style.css" rel="stylesheet" type="text/css">
 
 
     <!-- HTML5 shim and Respond.js IE8 support of HTML5 elements and media queries -->
@@ -44,241 +44,258 @@
             <ol class="indicator"></ol>
         </div>
 
+        <!-- Navigation -->
+        <ul id="menu">
+            <li><a href="#landing">Landing</a></li>
+            <li><a href="#music">Music</a></li>
+            <li><a href="#tour">Tour</a></li>
+            <li><a href="#shop">Shop</a></li>
+            <li><a href="#contact">Contact</a></li>
+        </ul>
+        <div id="mobile-nav">
+            <div id="mobile-logo" class="logodiv"></div>
+        </div>
+        <div id="nav">
+            <table><tbody>
+                <tr>
+                    <td id="logo">
+                        <a href="#landing">
+                            <div class="logodiv"></div>
+                        </a>
+                    </td>
+                    <td class="navitem">
+                        <a href="#music">music</a>
+                    </td>
 
-<!-- Navigation -->
-<div id="nav">
-    <table><tbody>
-        <tr>
-            <td id="logo">
-                <a onClick="navScroll('#landing');">
-                    <div id="logodiv"></div>
+                    <td class="navitem">
+                        <a href="#tour">tour</a>
+                    </td>
+
+                    <td class="navitem">
+                        <a href="#shop">shop</a>
+                    </td>
+
+                    <td class="navitem">
+                        <a href="#contact">contact</a>
+                    </td>
+                </tr>
+            </tbody></table>
+        </div>
+
+        <!-- Landing -->
+        <div id="landing-section">
+            <span id="landing" class="anchor"></span>
+            <div id="mobile-landing"></div>
+            <video autoplay loop>
+                <source src="/assets/vid/landing.mp4" type="video/mp4">
+                <object data="/assets/vid/landing.mp4">
+                    <embed src="/assets/vid/landing.mp4">
+                </object>
+            </video>
+        </div>
+
+        <!-- Music -->
+        <div id="music-section">
+            <span id="music" class="anchor"></span>
+            <h1>Music</h1>
+            <div id="promo">
+                <img src="/assets/img/promo-lp.png" alt="Time King LP Coming Soon!">
+            </div>
+        </div>
+
+        <!-- Tour -->
+        <div id="tour-section" class="section">
+            <span id="tour" class="anchor"></span>
+            <h1>Show Dates</h1>
+                <h2 id="show-date">
+                    July 25
+                </h2>
+                <h3>
+                    Amityville Music Hall<br>
+                    Amityville, NY<br>
+                    7:00pm
+                </h3>
+        </div>
+
+        <!-- Shop -->
+        <div id="shop-section" class="section">
+            <span id="shop" class="anchor"></span>
+            <h1>Online Store Coming Soon!</h1>
+
+            <div id="merch-gallery">
+
+                <a href="./assets/img/merch/Shirt_Blue.jpg" title="Shirt Blue">
+                    <img src="./assets/img/merch/Shirt_Blue.jpg" alt="Shirt Blue">
                 </a>
-            </td>
 
-            <td class="navitem">
-                <a onClick="navScroll('#music');">music</a>
-            </td>
-
-            <td class="navitem">
-                <a onClick="navScroll('#tour');">tour</a>
-            </td>
-
-            <td class="navitem">
-                <a onClick="navScroll('#shop');">shop</a>
-            </td>
-
-            <td class="navitem">
-                <a onClick="navScroll('#contact');">contact</a>
-            </td>
-
-        </tr>
-    </tbody></table>
-</div>
-
-<!-- Landing -->
-<div id="landing">
-    <video autoplay loop>
-        <source src="/assets/vid/landing.mp4" type="video/mp4">
-        <object data="/assets/vid/landing.mp4">
-            <embed src="/assets/vid/landing.mp4">
-            </object>
-        </video>
-    </div>
-
-<!-- Music -->
-<div id="music">
-    <div id="promo">
-        <img src="/assets/img/promo-lp.png" alt="Time King LP Coming Soon!">
-    </div>
-</div>
-
-<!-- Tour -->
-<div id="tour">
-    <h1>Show Dates</h1>
-
-
-
-        <h2 id="show-date">
-            July 25
-        </h2>
-        <h3>
-            Amityville Music Hall<br>
-            Amityville, NY<br>
-            7:00pm
-        </h3>
-
-
-</div>
-
-<!-- Shop -->
-<div id="shop">
-    <h1>Online Store Coming Soon!</h1>
-
-    <div id="merch-gallery">
-
-        <a href="./assets/img/merch/Shirt_Blue.jpg" title="Shirt Blue">
-            <img src="./assets/img/merch/Shirt_Blue.jpg" alt="Shirt Blue">
-        </a>
-
-        <a href="./assets/img/merch/Shirt_Charcoal.jpg" title="Shirt Charcoal">
-            <img src="./assets/img/merch/Shirt_Charcoal.jpg" alt="Shirt Charcoal">
-        </a>
-
-        <a href="./assets/img/merch/Shirt_Grey.jpg" title="Shirt Grey">
-            <img src="./assets/img/merch/Shirt_Grey.jpg" alt="Shirt Grey">
-        </a>
-
-        <a href="./assets/img/merch/TK_Poster.jpg" title="TK Poster">
-            <img src="./assets/img/merch/TK_Poster.jpg" alt="TK Poster">
-        </a>
-
-        <a href="./assets/img/merch/TK_Stickers.jpg" title="TK Stickers">
-            <img src="./assets/img/merch/TK_Stickers.jpg" alt="TK Stickers">
-        </a>
-
-        <a href="./assets/img/merch/Watson_EP.jpg" title="Watson EP">
-            <img src="./assets/img/merch/Watson_EP.jpg" alt="Watson EP">
-        </a>
-
-    </div>
-</div>
-
-<!-- Contact -->
-<div id="contact">
-
-    <!-- Social Sprites -->
-    <table><tbody>
-        <tr>
-
-            <td>
-                <a href="//youtube.com/timekingofficial">
-                    <img src="/assets/img/social/youtube.png" alt="YouTube">
+                <a href="./assets/img/merch/Shirt_Charcoal.jpg" title="Shirt Charcoal">
+                    <img src="./assets/img/merch/Shirt_Charcoal.jpg" alt="Shirt Charcoal">
                 </a>
-            </td>
 
-            <td>
-                <a href="//instagram.com/timekingofficial">
-                    <img src="/assets/img/social/instagram.png" alt="Instagram">
+                <a href="./assets/img/merch/Shirt_Grey.jpg" title="Shirt Grey">
+                    <img src="./assets/img/merch/Shirt_Grey.jpg" alt="Shirt Grey">
                 </a>
-            </td>
 
-            <td>
-                <a href="//twitter.com/timekingband">
-                    <img src="/assets/img/social/twitter.png" alt="Twitter">
+                <a href="./assets/img/merch/TK_Poster.jpg" title="TK Poster">
+                    <img src="./assets/img/merch/TK_Poster.jpg" alt="TK Poster">
                 </a>
-            </td>
 
-            <td>
-                <a href="//facebook.com/timekingofficial">
-                    <img src="/assets/img/social/facebook.png" alt="Facebook">
+                <a href="./assets/img/merch/TK_Stickers.jpg" title="TK Stickers">
+                    <img src="./assets/img/merch/TK_Stickers.jpg" alt="TK Stickers">
                 </a>
-            </td>
 
-            <td>
-                <a href="//timekingofficial.bandcamp.com">
-                    <img src="/assets/img/social/bandcamp.png" alt="Bandcamp">
+                <a href="./assets/img/merch/Watson_EP.jpg" title="Watson EP">
+                    <img src="./assets/img/merch/Watson_EP.jpg" alt="Watson EP">
                 </a>
-            </td>
 
-        </tr>
-    </tbody></table>
+            </div>
+        </div>
 
-    <!-- Mailing Form -->
-    <h2>Time King Mailing List</h2>
-    <h3>Stay up to date with the latest TK news!</h3>
-    <form id="mailing-form" action="https://docs.google.com/forms/d/1YqR5narHyBcg3oHBBeU0e5hL2fhLapu0D16DZZXx3yI/formResponse" method="post">
-        <table>
-            <tbody>
-            <tr>
-                <td valign="top">
-                    <label for="First Name">First Name</label>
-                </td><td>
-                    <input type="text" name="entry.695556560" id="first-name" size="50" placeholder="Bill" required>
-                </td>
-            </tr><tr>
-                <td valign="top">
-                    <label for="Last Name">Last Name</label>
-                </td><td>
-                    <input type="text" name="entry.1183487257" id="last-name" size="50" placeholder="Cosby">
-                </td>
-            </tr><tr>
-                <td valign="top">
-                    <label for="Email">Email</label>
-                </td><td>
-                    <input type="text" name="entry.2085277629" id="email" size="50" placeholder="bill@billcosby.com" required>
-                </td>
-            </tr><tr>
-                <td valign="top">
-                    <label for="Phone Number">Phone Number</label>
-                </td><td>
-                    <input type="text" name="entry.1914038827" id="phone-number" size="50" placeholder="(optional)">
-                </td>
-            </tr><tr>
-                <td valign="top">
-                    <label for="Comments">Comments</label>
-                </td><td>
-                    <textarea name="entry.1740703950" id="comment" placeholder="Nice Hoagie"></textarea>
-                </td>
-            </tr><tr>
-                <td></td>
-                <td valign="top">
-                    <button type="submit" id="submit-button"><span></span></button>
-                </td>
-            </tr>
-            </tbody>
-        </table>
-    </form>
+        <!-- Contact -->
+        <div id="contact-section" class="section">
+            <span id="contact" class="anchor"></span>
+            <!-- Social Sprites -->
+            <table><tbody>
+                <tr>
+                    <td>
+                        <a href="//youtube.com/timekingofficial">
+                            <img src="/assets/img/social/youtube.png" alt="YouTube">
+                        </a>
+                    </td>
 
-</div>
+                    <td>
+                        <a href="//instagram.com/timekingofficial">
+                            <img src="/assets/img/social/instagram.png" alt="Instagram">
+                        </a>
+                    </td>
 
+                    <td>
+                        <a href="//twitter.com/timekingband">
+                            <img src="/assets/img/social/twitter.png" alt="Twitter">
+                        </a>
+                    </td>
 
+                    <td>
+                        <a href="//facebook.com/timekingofficial">
+                            <img src="/assets/img/social/facebook.png" alt="Facebook">
+                        </a>
+                    </td>
 
-<script src="//code.jquery.com/jquery-1.10.2.min.js"></script>
-<script src="/js/blueimp-gallery.min.js"></script>
+                    <td>
+                        <a href="//timekingofficial.bandcamp.com">
+                            <img src="/assets/img/social/bandcamp.png" alt="Bandcamp">
+                        </a>
+                    </td>
+                </tr>
+            </tbody></table>
 
-<script>
-/**
-  * Check a href for an anchor. If exists, and in document, scroll to it.
-  * If href argument ommited, assumes context (this) is HTML Element,
-  * which will be the case when invoked by jQuery after an event
-  */
-function navScroll(href) {
-    href = typeof(href) == "string" ? href : $(this).attr("href");
+            <!-- Mailing Form -->
+            <h2>Time King Mailing List</h2>
+            <h3>Stay up to date with the latest TK news!</h3>
+            <form id="mailing-form" action="https://docs.google.com/forms/d/1YqR5narHyBcg3oHBBeU0e5hL2fhLapu0D16DZZXx3yI/formResponse" method="post">
+                <table>
+                    <tbody>
+                    <tr>
+                        <td valign="top">
+                            <label for="First Name">First Name</label>
+                        </td><td>
+                            <input type="text" name="entry.695556560" id="first-name" size="50" placeholder="Bill" required>
+                        </td>
+                    </tr><tr>
+                        <td valign="top">
+                            <label for="Last Name">Last Name</label>
+                        </td><td>
+                            <input type="text" name="entry.1183487257" id="last-name" size="50" placeholder="Cosby">
+                        </td>
+                    </tr><tr>
+                        <td valign="top">
+                            <label for="Email">Email</label>
+                        </td><td>
+                            <input type="text" name="entry.2085277629" id="email" size="50" placeholder="bill@billcosby.com" required>
+                        </td>
+                    </tr><tr>
+                        <td valign="top">
+                            <label for="Phone Number">Phone Number</label>
+                        </td><td>
+                            <input type="text" name="entry.1914038827" id="phone-number" size="50" placeholder="(optional)">
+                        </td>
+                    </tr><tr>
+                        <td valign="top">
+                            <label for="Comments">Comments</label>
+                        </td><td>
+                            <textarea name="entry.1740703950" id="comment" placeholder="Nice Hoagie"></textarea>
+                        </td>
+                    </tr><tr>
+                        <td></td>
+                        <td valign="top">
+                            <button type="submit" id="submit-button"><span></span></button>
+                        </td>
+                    </tr>
+                    </tbody>
+                </table>
+            </form>
 
-    // You could easily calculate this dynamically if you prefer
-    var fromTop = 80;
+        </div>
 
-    // If our Href points to a valid, non-empty anchor, and is on the same page (e.g. #foo)
-    // Legacy jQuery and IE7 may have issues: http://stackoverflow.com/q/1593174
-    if(href.indexOf("#") == 0) {
-        var $target = $(href);
+        <script src="//code.jquery.com/jquery-1.10.2.min.js"></script>
+        <script src="/js/blueimp-gallery.min.js"></script>
+        
+        <script>
+            $(function(){
+                $('#menu').slicknav({
+                    label: '',
+                    prependTo: '#landing-section',
+                    closeOnClick: true
+                });
+            });
+        </script>
 
-        // Older browser without pushState might flicker here, as they momentarily
-        // jump to the wrong position (IE < 10)
-        if($target.length) {
-            $('html, body').animate({ scrollTop: $target.offset().top - fromTop });
-            if(history && "pushState" in history) {
-                //history.pushState({}, document.title, window.location.pathname + href);
-                return false;
-            }
+        <script>
+        function scroll_if_anchor(href) {
+           href = typeof(href) == "string" ? href : $(this).attr("href");
+        
+           // If href missing, ignore
+           if(!href) return;
+        
+           // You could easily calculate this dynamically if you prefer
+           var fromTop = 0;
+        
+           // If our Href points to a valid, non-empty anchor, and is on the same page (e.g. #foo)
+           // Legacy jQuery and IE7 may have issues: http://stackoverflow.com/q/1593174
+           if(href.charAt(0) == "#") {
+               var $target = $(href);
+        
+               // Older browsers without pushState might flicker here, as they momentarily
+               // jump to the wrong position (IE < 10)
+               if($target.length) {
+                   $('html, body').animate({ scrollTop: $target.offset().top - fromTop });
+                   if(history && "pushState" in history) {
+                       //history.pushState({}, document.title, window.location.pathname + href);
+                       return false;
+                   }
+               }
+           }
         }
-    }
-}
-</script>
+        
+        // When our page loads, check to see if it contains and anchor
+        scroll_if_anchor(window.location.hash);
+        
+        // Intercept all anchor clicks
+        $("body").on("click", "a", scroll_if_anchor);
+        </script>
 
-<script>
-    document.getElementById('merch-gallery').onclick = function (event) {
-        event = event || window.event;
-        var target = event.target || event.srcElement,
-            link = target.src ? target.parentNode : target,
-            options = {index: link, event: event},
-            links = this.getElementsByTagName('a');
-        blueimp.Gallery(links, options);
-    };
-</script>
+        <script src="/js/jquery.slicknav.min.js"></script>
 
-  </body>
+        <script>
+            document.getElementById('merch-gallery').onclick = function (event) {
+                event = event || window.event;
+                var target = event.target || event.srcElement,
+                    link = target.src ? target.parentNode : target,
+                    options = {index: link, event: event},
+                    links = this.getElementsByTagName('a');
+                blueimp.Gallery(links, options);
+            };
+        </script>
+
+    </body>
 </html>
-
-
-
