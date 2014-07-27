@@ -275,6 +275,7 @@ h2, h3 {
 #contact-section {
     background: url('/assets/img/contact-tile.jpg') repeat center center;
     min-height: 600px;
+    padding-bottom: 20px;
 }
 
 #contact-section table {
