@@ -135,7 +135,7 @@ video {
     #mobile-nav { display: none; }
     .slicknav_menu {display: none;}
     #nav {display: table;}
-    body { padding-top: 80;}
+    body { padding-top: 80px;}
     .anchor {top: -80px;}
 }
 
