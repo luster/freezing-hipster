@@ -3,8 +3,8 @@
   <head>
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="description" content="Time King is a five-piece rock/prog band based out of Long Island, New York.">
+    <meta name="viewport" content="width=, initial-scale=1.0">
+    <meta name="description" content="Time King is a five-piece rock/prog band from Long Island, New York.">
     <meta name="author" content="Time King">
 
     <title>Time King</title>
@@ -85,7 +85,7 @@
         <!-- Landing -->
         <div id="landing-section">
             <span id="landing" class="anchor"></span>
-            <div id="mobile-landing"></div>
+            <div id="mobile-landing"><div id="title"><h2>Time King is a five-piece rock/prog band from Long Island, NY.</h2></div></div>
             <video autoplay loop>
                 <source src="/assets/vid/landing.mp4" type="video/mp4">
                 <object data="/assets/vid/landing.mp4">
@@ -123,30 +123,34 @@
             <h1>Online Store Coming Soon!</h1>
 
             <div id="merch-gallery">
-
-                <a href="./assets/img/merch/Shirt_Blue.jpg" title="Shirt Blue">
+                <ul>
+                <li><a href="./assets/img/merch/Shirt_Blue.jpg" title="Shirt Blue">
                     <img src="./assets/img/merch/Shirt_Blue.jpg" alt="Shirt Blue">
                 </a>
-
+            </li>
+            <li>
                 <a href="./assets/img/merch/Shirt_Charcoal.jpg" title="Shirt Charcoal">
                     <img src="./assets/img/merch/Shirt_Charcoal.jpg" alt="Shirt Charcoal">
                 </a>
-
+            </li><li>
                 <a href="./assets/img/merch/Shirt_Grey.jpg" title="Shirt Grey">
                     <img src="./assets/img/merch/Shirt_Grey.jpg" alt="Shirt Grey">
                 </a>
-
+            </li><li>
                 <a href="./assets/img/merch/TK_Poster.jpg" title="TK Poster">
                     <img src="./assets/img/merch/TK_Poster.jpg" alt="TK Poster">
                 </a>
-
+            </li><li>
                 <a href="./assets/img/merch/TK_Stickers.jpg" title="TK Stickers">
                     <img src="./assets/img/merch/TK_Stickers.jpg" alt="TK Stickers">
                 </a>
-
+            </li>
+            <li>
                 <a href="./assets/img/merch/Watson_EP.jpg" title="Watson EP">
                     <img src="./assets/img/merch/Watson_EP.jpg" alt="Watson EP">
                 </a>
+            </li>
+        </ul>
 
             </div>
         </div>
@@ -189,6 +193,23 @@
                 </tr>
             </tbody></table>
 
+            <!-- Contact Emails -->
+            <table id="contact-emails"><tbody>
+                <tr>
+                    <td>Band:</td>
+                    <td>band@timekingofficial.com</td>
+                </tr>
+                <tr>
+                    <td>Booking:</td>
+                    <td>booking@timekingofficial.com</td>
+                </tr>
+                <tr>
+                    <td>Press:</td>
+                    <td>press@timekingofficial.com</td>
+                </tr>
+            </tbody></table>
+            <br><br>
+
             <!-- Mailing Form -->
             <h2>Time King Mailing List</h2>
             <h3>Stay up to date with the latest TK news!</h3>
@@ -199,25 +220,25 @@
                         <td valign="top">
                             <label for="First Name">First Name</label>
                         </td><td>
-                            <input type="text" name="entry.695556560" id="first-name" size="50" placeholder="Bill" required>
+                            <input type="text" name="entry.695556560" id="first-name" size="35" placeholder="Bill" required>
                         </td>
                     </tr><tr>
                         <td valign="top">
                             <label for="Last Name">Last Name</label>
                         </td><td>
-                            <input type="text" name="entry.1183487257" id="last-name" size="50" placeholder="Cosby">
+                            <input type="text" name="entry.1183487257" id="last-name" size="35" placeholder="Cosby">
                         </td>
                     </tr><tr>
                         <td valign="top">
                             <label for="Email">Email</label>
                         </td><td>
-                            <input type="text" name="entry.2085277629" id="email" size="50" placeholder="bill@billcosby.com" required>
+                            <input type="text" name="entry.2085277629" id="email" size="35" placeholder="bill@billcosby.com" required>
                         </td>
                     </tr><tr>
                         <td valign="top">
                             <label for="Phone Number">Phone Number</label>
                         </td><td>
-                            <input type="text" name="entry.1914038827" id="phone-number" size="50" placeholder="(optional)">
+                            <input type="text" name="entry.1914038827" id="phone-number" size="35" placeholder="(optional)">
                         </td>
                     </tr><tr>
                         <td valign="top">
@@ -244,7 +265,7 @@
             $(function(){
                 $('#menu').slicknav({
                     label: '',
-                    prependTo: '#landing-section',
+                    prependTo: 'body',
                     closeOnClick: true
                 });
             });
@@ -258,8 +279,7 @@
            if(!href) return;
         
            // You could easily calculate this dynamically if you prefer
-           var fromTop = 0;
-        
+           var fromTop = $(window).width() >= 1024 ? 80 : 46;
            // If our Href points to a valid, non-empty anchor, and is on the same page (e.g. #foo)
            // Legacy jQuery and IE7 may have issues: http://stackoverflow.com/q/1593174
            if(href.charAt(0) == "#") {

@@ -15,6 +15,7 @@
 
 body {
     font-family: "tk-text";
+    padding-top: 47px;
 }
 
 a {
@@ -23,8 +24,16 @@ a {
 
 /* NAV BAR */
 .slicknav_menu {
-    background: #AAA;
+    background: #B0B0B0;
+    top: 0;
+    position: fixed;
+    display: block;
+    width: 100%;
+    z-index: 9999;
+    box-shadow: 0px 2px 20px #bbb;
 }
+
+.slicknav_btn { margin-right: 10px;}
 
 .js #menu {
     display: block;
@@ -122,21 +131,41 @@ video {
     right: 0;
 }
 
+#title {
+    display: table;
+    height: 320px;
+    width: 72%;
+    margin: 0 auto;
+}
+
+#mobile-landing #title h2 {
+    text-align: center;
+    vertical-align: middle;
+    display: table-cell;
+    font-size: 20px;
+}
+
 #landing-section {
     width: 100%;
     left: 0;
     margin-top: -5px;
 }
 
-@media screen and (min-width:1024px) {
+@media screen and (min-width:1025px) {
     video { display: block; }
     #mobile-landing { display: none;}
     #shop-section #merch-gallery a img { width: 250px;}
     #mobile-nav { display: none; }
     .slicknav_menu {display: none;}
     #nav {display: table;}
+    div#shop-section.section div#merch-gallery ul li a img { width: 210px;}
+    div#merch-gallery { width:640px;}
     body { padding-top: 80px;}
     .anchor {top: -80px;}
+    div#contact-section.section table tbody tr td a img { width: 100%; }
+    div#contact-section.section table tbody tr td + td { padding-left: 10px; }
+    div#contact-section.section form#mailing-form table tbody tr td input,
+    div#contact-section.section form#mailing-form table tbody tr td textarea { max-width: 270px;}
 }
 
 /* MUSIC */
@@ -146,12 +175,16 @@ video {
 }
 
 #promo {
-    padding: 60px;
+    /*padding: 20px;*/
+    padding-bottom: 30px;
+    width: 100%;
 }
 
 #promo img {
     display: block;
     margin: 0 auto;
+    max-width: 300px;
+    text-align: center;
 }
 
 /* TOUR */
@@ -217,14 +250,24 @@ h2, h3 {
 
 #merch-gallery {
     margin: 0 auto;
-    max-width: 62%;
+    padding: 0;
+    width: 320px;
     text-align: center;
 }
 
-#shop-section #merch-gallery a img {
-    width: 250px;
+#merch-gallery ul {
+    list-style-type: none;
+    display: inline-block;
+}
+
+#merch-gallery ul li {
+    display: inline-block;
+}
+
+#shop-section #merch-gallery ul li a img {
+    width: 105px;
     height: auto;
-    margin: auto;
+    margin: 0;
     display: inline-block;
 }
 
@@ -236,13 +279,13 @@ h2, h3 {
 
 #contact-section table {
     padding-top: 40px;
-    padding-bottom: 40px;
+    padding-bottom: 0px;
     margin: 0 auto;
     max-width: 640px;
 }
 
 #contact-section table tr td + td {
-    padding-left: 10px;
+    padding-left: 5px;
 }
 
 #contact-section table tr td a img {
@@ -250,10 +293,21 @@ h2, h3 {
     transition-property: opacity;
     transition-duration: 0.3s;
     transition-timing-function: ease;
+    width: 33px;
+    height: auto;
 }
 
 #contact-section table tr td a img:hover {
     opacity: 0.2;
+}
+
+#contact-emails {
+    color: white;
+    padding-bottom: 20px;
+}
+
+#contact-emails tbody tr td:first-child {
+    text-align: right;
 }
 
 #mailing-form {
@@ -265,9 +319,12 @@ h2, h3 {
     color: white;
 }
 
+#contact-section h2 { font-size: 16px;}
+#contact-section h3 { font-size: 12px;}
+
 #mailing-form label {
     float: right;
-    font-size: 20px;
+    font-size: 12px;
 }
 
 input, textarea {
@@ -279,7 +336,7 @@ input, textarea {
     width: 100%;
     float: right;
     padding: 0;
-    max-width: 270px;
+    max-width: 200px;
     font-family: tk-text;
     font-size: 16px;
 }
