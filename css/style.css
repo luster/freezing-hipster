@@ -334,6 +334,7 @@ textarea { height: 10em;}
     z-index: -1;
     top: -47px;
     left: 0;
+    top: 0;
     visibility: hidden;
 }
 
