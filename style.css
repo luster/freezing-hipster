@@ -1,11 +1,11 @@
 @font-face {
     font-family: "tk-logo";
-    src: url("assets/font/kenyan_coffee_rg-webfont.ttf") format("truetype");
+    src: url("./assets/font/kenyan_coffee_rg-webfont.ttf") format("truetype");
 }
 
 @font-face {
     font-family: "tk-text";
-    src: url("assets/font/hero-webfont.ttf") format("truetype");
+    src: url("./assets/font/hero-webfont.ttf") format("truetype");
 }
 
 * {
@@ -74,14 +74,14 @@ a {
 }
 
 .logodiv {
-    background: url("assets/img/logo.png") no-repeat center center;
+    background: url("./assets/img/logo.png") no-repeat center center;
     width: 184px;
     height: 61px;
 
 }
 
 .logodiv:hover {
-    background: url("assets/img/logo-hover.png") no-repeat center center;
+    background: url("./assets/img/logo-hover.png") no-repeat center center;
     width: 184px;
     height: 61px;
     cursor:pointer;
@@ -125,7 +125,7 @@ video {
 }
 
 #mobile-landing {
-    background: url('assets/img/landing-mobile.jpg') no-repeat right center;
+    background: url('./assets/img/landing-mobile.jpg') no-repeat right center;
     width: 100%;
     height: 320px;
     background-color: black;
@@ -192,7 +192,7 @@ video {
 
 /* TOUR */
 #tour-section {
-    background: url('assets/img/bg-show.jpg') no-repeat center center;
+    background: url('./assets/img/bg-show.jpg') no-repeat center center;
     background-color: black;
     background-size: contain;
     min-height: 600px;
@@ -276,7 +276,7 @@ h2, h3 {
 
 /* CONTACT */
 #contact-section {
-    background: url('assets/img/contact-tile.jpg') repeat center center;
+    background: url('./assets/img/contact-tile.jpg') repeat center center;
     min-height: 600px;
     padding-bottom: 20px;
 }
@@ -355,7 +355,7 @@ textarea { height: 10em;}
 
 #submit-button {
     /*background: url('assets/img/send-sprite.png') no-repeat 100% 0;*/
-    background: url('assets/img/send-sprite.png') no-repeat;
+    background: url('./assets/img/send-sprite.png') no-repeat;
     width: 57px;
     height: 19px;
     padding: 0;
@@ -367,7 +367,7 @@ textarea { height: 10em;}
 }
 
 #submit-button span {
-    background: url('assets/img/send-sprite.png') no-repeat;
+    background: url('./assets/img/send-sprite.png') no-repeat;
     background-position: 0 -19px;
     top:0;left:0;bottom:0;right:0;
     width: 57px;
