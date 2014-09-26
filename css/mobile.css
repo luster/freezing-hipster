@@ -1,0 +1,56 @@
+@font-face {
+    font-family: "tk-logo";
+    src: url("/static/font/kenyan_coffee_rg-webfont.ttf") format("truetype");
+}
+
+@font-face {
+    font-family: "tk-text";
+    src: url("/static/font/hero-webfont.ttf") format("truetype");
+}
+
+html, body {
+    margin: 0 auto;
+    font-family: "tk-text";
+}
+
+img {
+    max-width: 75%;
+    display: block;
+    margin: 0 auto;
+    padding: 30px;
+}
+
+h1 {
+    font-family: "tk-logo";
+    text-transform: uppercase;
+    text-align: center;
+    padding-top: 20px;
+    padding-bottom: 10px;
+}
+
+h2, h3 {
+    text-align: center;
+}
+
+
+#landing {
+    background: url('/static/img/landing-mobile.jpg') no-repeat center center;
+    width: 320px;
+    height: 320px;
+}
+
+#tour {
+    background: url('/static/img/bg-show.jpg') no-repeat center center;
+    background-color: black;
+    background-size: contain;
+    min-height: 320px;
+    max-height: 320px;
+    width: inherit;
+}
+
+#tour h1 {
+    color: white;
+    margin: 0;
+}
+
+#tour h2, h3 { color: white; }
