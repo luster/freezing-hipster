@@ -314,6 +314,10 @@ h2, h3 {
     text-align: right;
 }
 
+#contact-emails tbody tr td a {
+    color: white;
+}
+
 #mailing-form {
     text-align: center;
 }
