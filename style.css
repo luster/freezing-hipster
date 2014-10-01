@@ -36,6 +36,10 @@ body {
     opacity: 0.5;
 }
 
+a {
+    text-decoration: none;
+}
+
 /* NAV BAR */
 .slicknav_menu {
     /*background: #B0B0B0;*/
