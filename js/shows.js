@@ -17,8 +17,10 @@ $.ajax({
             var t = $.format.date(date, "h:mmp").replace(/\./g,'');
             var venue = d[i].venue.name;
             var loc = d[i].formatted_location;
+            var tixref = d[i].ticket_url;
 
-            $("#tour-section").append('<h2>'+md+'</h2><h3>'+venue+'<br>'+loc+'<br>'+t+'<br><br>');
+            var to_a = '<h2>'+ md + '</h2>' + '<h4><a href="' + tixref + '">Get tickets!</a></h4><h3>' + venue + '<br>' + loc + '<br>' + t + '<br><br>';
+            $("#tour-section").append(to_a);
         }
         return;
     }

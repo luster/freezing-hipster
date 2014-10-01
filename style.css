@@ -13,13 +13,27 @@
     padding: 0;
 }
 
+html {
+    -webkit-font-smoothing: antialiased;
+}
+
 body {
     font-family: "tk-text";
     padding-top: 47px;
 }
 
-a {
+#contact-section a,
+#tour-section a {
     text-decoration: none;
+    opacity: 1;
+    transition-property: opacity;
+    transition-duration: 0.3s;
+    transition-timing-function: ease;
+}
+
+#contact-section a:hover,
+#tour-section a:hover {
+    opacity: 0.5;
 }
 
 /* NAV BAR */
@@ -230,15 +244,23 @@ video {
 
 #tour-section h2 {
     text-transform: uppercase;
-    margin-bottom: 5px;
+    margin-bottom: 3px;
 }
 
 #tour-section h3 {
     font-size: 20px;
-    margin-top: 0px;
+    margin-top: 3px;
 }
 
-h1, h2, h3 {
+#tour-section h4 {
+    font-size: 18px;
+}
+
+#tour-section h4 a {
+    color: white;
+}
+
+h1, h2, h3, h4 {
     text-align: center;
 }
 
