@@ -69,8 +69,8 @@ a {
     height: 47px;
     width: 100%;
     background-size: auto 38px;
-    position: absolute;
-    display: inline-block;
+    position: fixed;
+    display: block;
     top: 0;
     right: 0;
 }
