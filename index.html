@@ -68,9 +68,11 @@
             <li><a href="#shop">Shop</a></li>
             <li><a href="#contact">Contact</a></li>
         </ul>
+        <!--
         <div id="mobile-nav">
             <div id="mobile-logo" class="logodiv"></div>
         </div>
+        -->
         <div id="nav">
             <table><tbody>
                     <tr>
@@ -279,7 +281,10 @@
                 $('#menu').slicknav({
                     label: '',
                     prependTo: 'body',
-                    closeOnClick: true
+                    closeOnClick: true,
+                    init: function(){
+                        $('.slicknav_menu').prepend('<div id="mobile-logo" class="logodiv"></div>');
+                    }
                 });
             });
         </script>

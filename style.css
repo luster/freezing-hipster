@@ -65,7 +65,14 @@ a {
 }
 
 #mobile-logo {
-    margin: 10px auto;
+    margin: 0 auto;
+    height: 47px;
+    width: 100%;
+    background-size: auto 38px;
+    position: absolute;
+    display: inline-block;
+    top: 0;
+    right: 0;
 }
 
 #menu { display: none;}
@@ -93,15 +100,12 @@ a {
 
 .logodiv {
     background: url("./assets/img/logo.png") no-repeat center center;
-    width: 184px;
-    height: 61px;
-
+    height: 47px;
+    width: auto;
 }
 
 .logodiv:hover {
     background: url("./assets/img/logo-hover.png") no-repeat center center;
-    width: 184px;
-    height: 61px;
     cursor:pointer;
 }
 
@@ -176,6 +180,7 @@ video {
     video { display: block; }
     #mobile-landing { display: none;}
     #shop-section #merch-gallery a img { width: 250px;}
+    #mobile-logo { margin: 10px auto; }
     #mobile-nav { display: none; }
     .slicknav_menu {display: none;}
     #nav {display: table;}
@@ -187,6 +192,7 @@ video {
     div#contact-section.section table tbody tr td + td { padding-left: 10px; }
     div#contact-section.section form#mailing-form table tbody tr td input,
     div#contact-section.section form#mailing-form table tbody tr td textarea { max-width: 270px;}
+    .logodiv { width: 184px; height: 61px; }
 }
 
 /* MUSIC */
