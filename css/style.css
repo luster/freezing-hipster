@@ -184,8 +184,10 @@ video {
     #mobile-nav { display: none; }
     .slicknav_menu {display: none;}
     #nav {display: table;}
+    div#music-section div#promo ul li a img { width: 320px;}
     div#shop-section.section div#merch-gallery ul li a img { width: 210px;}
     div#merch-gallery { width:640px;}
+    div#promo { width: 640px;}
     body { padding-top: 80px;}
     .anchor {top: -80px;}
     div#contact-section.section table tbody tr td a img { width: 100%; }
@@ -198,27 +200,35 @@ video {
 /* MUSIC */
 #music-section {
     width:100%;
-    position: relative;
-    display: block;
+    margin: 0 auto;
 }
 
 #promo {
     padding-bottom: 30px;
     margin: 0 auto;
+    width: 320px;
+}
+
+#promo ul {
+    list-style-type: none;
+    display: inline-block;
+}
+
+#promo ul li {
+    display: inline-block;
 }
 
 #promo a {
     display: block;
     margin: 0 auto;
-    height: 259px;
-    width: 300px;
 }
 
-#promo a img {
-    clear: both;
-    text-align: center;
+#promo ul li a img {
     margin: 0 auto;
-    max-width: 300px;
+    display: inline-block;
+    width: 160px;
+    height: auto;
+    text-align: center;
     opacity: 1;
     transition-property: opacity;
     transition-duration: 0.3s;
