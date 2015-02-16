@@ -1,10 +1,7 @@
 
 q = [
-    "Nice Hoagie",
-    "Puddin' Pops",
-    "Jell-O Pudding",
-    "More Hoagies For Me",
-    "Zip Zop Zoobity Bop"
+    "Who you callin turkey?",
+    "For your health",
 ];
 
 var l = q.length;
