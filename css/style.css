@@ -350,7 +350,7 @@ h2, h3 {
 }
 
 #shop-section #merch-gallery ul li a img {
-    width: 105px;
+    width: 150px;
     height: auto;
     margin: 0;
     display: inline-block;
@@ -379,7 +379,7 @@ h2, h3 {
     transition-property: opacity;
     transition-duration: 0.3s;
     transition-timing-function: ease;
-    width: 33px;
+    width: 37px;
     height: auto;
 }
 
