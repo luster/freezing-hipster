@@ -20,7 +20,9 @@ $(document).ready(function(){
                 var loc = d[i].formatted_location;
                 var tixref = d[i].ticket_url;
     
-                var to_a = '<h2>'+ md + '</h2>' + '<h4><a href="' + tixref + '">Get tickets!</a></h4><h3>' + venue + '<br>' + loc + '<br>' + t + '<br><br>';
+                var to_a = '<h2>'+ md + '</h2>';
+		if (tixref !== null) to_a += '<h4><a href="' + tixref + '">Get tickets!</a></h4>';
+		to_a += '<h3>' + venue + '<br>' + loc + '<br>' + t + '<br><br>';
                 $("#tour-section").append(to_a);
             }
             return;
