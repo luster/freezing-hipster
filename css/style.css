@@ -217,6 +217,8 @@ video {
 	padding-top:30px;
 	height:0;
 	overflow:hidden;
+	margin-bottom:10px;
+	margin-top:10px;
 }
 
 .vid-container iframe, .vid-container object, .vid-container embed {
