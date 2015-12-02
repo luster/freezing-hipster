@@ -176,6 +176,19 @@ video {
     margin-top: -5px;
 }
 
+#landing-section > .vid-container {
+    margin-bottom: 0;
+}
+#landing-section > a > h1 > div {
+    font-size: 0.7em;
+}
+#landing-section > a {
+    color:black;
+}
+#landing-section { background-color: #d42426;}
+#tour-section, #music-section { background-color: #0a7a3c;}
+
+
 @media screen and (min-width:1025px) {
     video { display: block; }
     #mobile-landing { display: none;}
@@ -208,7 +221,7 @@ video {
 .you-toob {
     width:80%;
     max-width:678px;
-    margin: 0 auto; 
+    margin: 0 auto;
 }
 
 .vid-container {
@@ -231,7 +244,8 @@ video {
 
 #promo {
     padding-bottom: 30px;
-    margin: 8px auto;
+    /*margin: 8px auto;*/
+    margin: 0 auto;
     width: 320px;
     text-align:center;
 }
