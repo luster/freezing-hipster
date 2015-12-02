@@ -176,6 +176,10 @@ video {
     margin-top: -5px;
 }
 
+#landing-section > h1 > div {
+    font-size: 0.7em;
+}
+
 @media screen and (min-width:1025px) {
     video { display: block; }
     #mobile-landing { display: none;}
