@@ -40,6 +40,11 @@ a {
     text-decoration: none;
 }
 
+a:hover {
+    cursor:pointer;
+    cursor:hand;
+}
+
 /* NAV BAR */
 .slicknav_menu {
     /*background: #B0B0B0;*/
@@ -176,7 +181,20 @@ video {
     margin-top: -5px;
 }
 
-@media screen and (min-width:1025px) {
+#main-street-section {
+    width: 100%;
+    left: 0;
+    margin-top: -5px;
+
+    background: url('/assets/img/mainstreet/feather/2edit01.png') no-repeat center center;
+    background-color: black;
+    background-size: contain;
+    min-height: 542px;
+    width: inherit;
+}
+
+@media
+only screen and (min-width:1025px) {
     video { display: block; }
     #mobile-landing { display: none;}
     #shop-section #merch-gallery a img { width: 250px;}
@@ -203,12 +221,10 @@ video {
     margin: 0 auto;
 }
 
-
-
 .you-toob {
     width:80%;
     max-width:678px;
-    margin: 0 auto; 
+    margin: 0 auto;
 }
 
 .vid-container {
