@@ -152,10 +152,9 @@ video {
 }
 
 #mobile-landing {
-    background: url('/assets/img/landing-mobile.jpg') no-repeat right center;
     width: 100%;
     height: 320px;
-    background-color: black;
+    background: black url('/assets/img/landing-mobile.jpg') no-repeat right center;
     /*display: block;*/
     display: none;
     background-size: contain;
