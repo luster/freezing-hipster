@@ -188,16 +188,33 @@ video {
     margin-top: -5px;
 
     /*background: url('/assets/img/mainstreet/feather/2edit01.png') no-repeat center center;*/
-    background: url('/assets/img/mainstreet/promo/Stix and Feathers.png') no-repeat center center;
-    background-color: black;
+    background: black url('/assets/img/mainstreet/promo/Stix and Feathers - Small.png') no-repeat center center;
     background-size: contain;
-    min-height: 390px;
-    width: inherit;
+    min-height: 156px;
+}
+
+@media only screen and (min-width: 680px) {
+    #main-street-section {
+        width: 100%;
+        left: 0;
+        margin-top: -5px;
+
+        background: black url('/assets/img/mainstreet/promo/Stix and Feathers - Medium.png') no-repeat center center;
+        background-size: contain;
+        min-height: 356px;
+    }
 }
 
 @media
 only screen and (min-width:1025px) {
     video { display: block; }
+    div#main-street-section {
+        background: black url('/assets/img/mainstreet/promo/Stix and Feathers.png') no-repeat center center;
+        min-height:586px;
+        width:100%;
+        background-size:contain;
+
+    }
     #mobile-landing { display: none;}
     #shop-section #merch-gallery a img { width: 250px;}
     #mobile-logo { margin: 10px auto; }
@@ -215,6 +232,7 @@ only screen and (min-width:1025px) {
     div#contact-section.section form#mailing-form table tbody tr td input,
     div#contact-section.section form#mailing-form table tbody tr td textarea { max-width: 270px;}
     .logodiv { width: 184px; height: 61px; }
+    #r2-social img {  width: 66px !important;  }
 }
 
 /* MUSIC */
@@ -361,7 +379,7 @@ h2, h3 {
 }
 
 #shop-section h2 {
-    font-size:1em;
+    font-size:20px;
     padding-bottom: 15px;
 }
 
@@ -398,6 +416,10 @@ h2, h3 {
 #r2-social {
     padding-top: 0px !important;
     padding-bottom:0px !important;
+}
+
+#r2-social > tbody > tr > td > a > img {
+    width: 37px;
 }
 
 #contact-section table tr td + td {
