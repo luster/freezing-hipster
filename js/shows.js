@@ -1,7 +1,7 @@
 
 $(document).ready(function(){ 
     var band = 'Time%20King';
-    var url = 'http://api.bandsintown.com/artists/'+band+'/events.json?api_version=2.0&app_id=tk-site'
+    var url = 'https://api.bandsintown.com/artists/'+band+'/events.json?api_version=2.0&app_id=tk-site'
     
     $.ajax({
         type: "GET",
